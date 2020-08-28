@@ -53,7 +53,7 @@ services:
     container_name: certbot
     volumes:
       - certbot-etc:/etc/letsencrypt
-      - wordpress:/var/www/html
+      - ./wordpress:/var/www/html
     command: certonly --webroot --webroot-path=/var/www/html --email jeysonv.sis@gmail.com --agree-tos --no-eff-email --staging -d jeykode.com -d www.jeykode.com
 
 volumes:
