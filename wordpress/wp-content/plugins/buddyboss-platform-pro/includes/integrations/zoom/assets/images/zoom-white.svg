@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="304px" height="166px" viewBox="0 0 304 166" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>zoom</title>
+    <defs>
+        <path d="M0.8,9.1 L0.8,120.1 C0.9,145.2 21.4,165.4 46.4,165.301101 L208.2,165.301101 C212.8,165.301101 216.5,161.6 216.5,157.1 L216.5,46.1 C216.4,21 195.9,0.8 170.9,0.898899071 L9.1,0.898899071 C4.5,0.898899071 0.8,4.6 0.8,9.1 Z M226.8,52.4 L293.6,3.6 C299.4,-1.2 303.9,-1.03250741e-14 303.9,8.7 L303.9,157.5 C303.9,167.4 298.4,166.2 293.6,162.6 L226.8,113.9 L226.8,52.4 L226.8,52.4 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="zoom">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="path-1"></g>
+            <polygon id="Fill-10" fill="#FFFFFF" fill-rule="nonzero" mask="url(#mask-2)" points="0.8 167.4 303.9 167.4 303.9 -1.2 0.8 -1.2"></polygon>
+        </g>
+    </g>
+</svg>
