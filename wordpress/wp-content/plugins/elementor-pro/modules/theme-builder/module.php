@@ -311,7 +311,7 @@ class Module extends Module_Base {
 		$categories['general']['items']['theme-builder'] = [
 			'title' => __( 'Theme Builder', 'elementor-pro' ),
 			'icon' => 'library-save',
-			'url' => $this->get_admin_templates_url(),
+			'url' => Plugin::elementor()->app->get_settings( 'menu_url' ),
 			'keywords' => [ 'template', 'header', 'footer', 'single', 'archive', 'search', '404', 'library' ],
 		];
 

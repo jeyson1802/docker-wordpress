@@ -138,7 +138,7 @@ class Templates extends Base_Endpoint {
 		if ( ! $supports_site_editor ) {
 			return [
 				'id' => $template['template_id'],
-				'previewUrl' => $this->get_preview_url( $template['template_id'] ),
+				'url' => $template['url'],
 				'editURL' => $document->get_edit_url(),
 				'supportsSiteEditor' => false,
 			];

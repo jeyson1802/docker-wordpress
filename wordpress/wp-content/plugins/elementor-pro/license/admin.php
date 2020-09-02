@@ -286,7 +286,7 @@ class Admin {
 				'button' => [
 					'text' => '<i class="dashicons dashicons-update" aria-hidden="true"></i>' . __( 'Connect & Activate', 'elementor-pro' ),
 					'url' => $this->get_connect_url(),
-				]
+				],
 			] );
 
 			return;
@@ -308,7 +308,7 @@ class Admin {
 				'button' => [
 					'text' => $error_data['button_text'],
 					'url' => $error_data['button_url'],
-				]
+				],
 			] );
 
 			return;
@@ -330,7 +330,7 @@ class Admin {
 					'button' => [
 						'text' => __( 'Renew License', 'elementor-pro' ),
 						'url' => $renew_url,
-					]
+					],
 				] );
 			}
 		}
