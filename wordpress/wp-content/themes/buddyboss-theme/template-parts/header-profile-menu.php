@@ -440,5 +440,5 @@ if( is_user_logged_in() ) {
 	// Action - After buddypress profile menu
 	do_action( THEME_HOOK_PREFIX . 'after_bb_profile_menu' );
 
-	printf( "<li class='logout-link'><a href='%s'>%s</a></li>", wp_logout_url( bp_get_requested_url() ), __( 'Logout', 'buddyboss-theme' ) );
+	printf( "<li class='logout-link'><a href='%s'>%s</a></li>", wp_logout_url( bp_get_requested_url() ), __( 'Log Out', 'buddyboss-theme' ) );
 }

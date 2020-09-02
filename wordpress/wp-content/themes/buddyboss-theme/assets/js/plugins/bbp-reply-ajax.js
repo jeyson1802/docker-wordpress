@@ -122,6 +122,9 @@ jQuery(
 						var editor_element_key = $bbpress_forums_element.find( '.bbp-reply-form form' ).find( '.bbp-the-content' ).data( 'key' );
 
 						if ( typeof window.forums_medium_reply_editor !== 'undefined' && typeof window.forums_medium_reply_editor[editor_element_key] !== 'undefined' ) {
+							// Reset formatting of editor
+							window.forums_medium_reply_editor[editor_element_key].execAction('selectAll');
+							window.forums_medium_reply_editor[editor_element_key].execAction('removeFormate');
 							window.forums_medium_reply_editor[editor_element_key].resetContent();
 						}
 						$bbpress_forums_element.find( '.bbp-reply-form form' ).find( '.bbp-the-content' ).removeClass( 'error' );

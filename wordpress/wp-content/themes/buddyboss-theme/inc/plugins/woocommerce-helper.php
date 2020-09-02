@@ -92,10 +92,7 @@ if ( !class_exists( '\BuddyBossTheme\WooCommerceHelper' ) ) {
 	     *
 	     */
 	    public function woocommerce_sidebar() {
-
-		    if( function_exists('is_product') && is_product() ) {
-				get_sidebar( 'woocommerce' );
-			}
+			get_sidebar( 'woocommerce' );
 	    }
 
 	    /**

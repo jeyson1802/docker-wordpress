@@ -92,7 +92,7 @@ class Templates extends Base_Endpoint {
 			return new Lock_Error_Response( $lock_by_user_id );
 		}
 
-		return ! ! wp_delete_post( $id );
+		return ! ! wp_trash_post( $id );
 	}
 
 	/**

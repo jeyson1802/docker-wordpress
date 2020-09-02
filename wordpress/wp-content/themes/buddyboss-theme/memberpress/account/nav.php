@@ -21,7 +21,7 @@ if( $current_page_id == $account_page_id ) {
       <a href="<?php echo MeprHooks::apply_filters('mepr-account-nav-payments-link',$account_url.$delim.'action=payments'); ?>" id="mepr-account-payments"><?php echo MeprHooks::apply_filters('mepr-account-nav-payments-label',_x('Payments', 'ui', 'buddyboss-theme')); ?></a>
     </span>
     <?php MeprHooks::do_action('mepr_account_nav', $mepr_current_user); ?>
-    <span class="mepr-nav-item"><a href="<?php echo MeprUtils::logout_url(); ?>" id="mepr-account-logout"><?php _ex('Logout', 'ui', 'buddyboss-theme'); ?></a></span>
+    <span class="mepr-nav-item"><a href="<?php echo MeprUtils::logout_url(); ?>" id="mepr-account-logout"><?php _ex('Log Out', 'ui', 'buddyboss-theme'); ?></a></span>
   </div>
 </div>
 

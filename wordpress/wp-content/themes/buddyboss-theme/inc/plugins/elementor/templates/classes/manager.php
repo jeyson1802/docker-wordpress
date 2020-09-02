@@ -241,14 +241,21 @@ if ( ! class_exists( 'BB_Elementor_Templates_Manager' ) ) {
 			}
 			
 			$template_data = $source->get_item( $template_id );
-			
+
+			$content = '';
+			if ( ! empty( $template_data['content'] ) && $source_name && 'bb-elementor-sections-api' === $source_name ) {
+				$content = array( $template_data['content'] );
+			} elseif ( ! empty( $template_data['content'] ) && $source_name && 'bb-elementor-pages-api' === $source_name ) {
+				$content = $template_data['content'];
+			}
+
 			if ( ! empty( $template_data['content'] ) ) {
 				wp_insert_post( array(
 					'post_type'   => 'elementor_library',
 					'post_title'  => $template['title'],
 					'post_status' => 'publish',
 					'meta_input'  => array(
-						'_elementor_data'          => $template_data['content'],
+						'_elementor_data'          => $content,
 						'_elementor_edit_mode'     => 'builder',
 						'_elementor_template_type' => 'section',
 					),

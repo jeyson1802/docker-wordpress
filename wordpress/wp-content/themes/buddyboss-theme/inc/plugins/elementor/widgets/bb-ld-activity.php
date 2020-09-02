@@ -224,6 +224,35 @@ class Ld_Activity extends Widget_Base {
 			]
 		);
 
+		$this->add_control(
+			'no_courses_paragraph_text',
+			[
+				'label' => __( 'No Courses Paragraph Text', 'buddyboss-theme' ),
+				'type' => Controls_Manager::TEXT,
+				'dynamic' => [
+					'active' => true,
+				],
+				'default' => __( 'You don\'t have any ongoing courses.', 'buddyboss-theme' ),
+				'placeholder' => __( 'Enter no courses paragraph text', 'buddyboss-theme' ),
+				'label_block' => true,
+				'separator' => 'before'
+			]
+		);
+
+		$this->add_control(
+			'no_courses_button_text',
+			[
+				'label' => __( 'No Courses Button Text', 'buddyboss-theme' ),
+				'type' => Controls_Manager::TEXT,
+				'dynamic' => [
+					'active' => true,
+				],
+				'default' => __( 'Explore Courses', 'buddyboss-theme' ),
+				'placeholder' => __( 'Enter no courses button text', 'buddyboss-theme' ),
+				'label_block' => true
+			]
+		);
+
 		$this->end_controls_section();
 
 		$this->start_controls_section(
@@ -1247,8 +1276,7 @@ class Ld_Activity extends Widget_Base {
 						$last_activity_excerpt = '';
 						if ( empty( $excerpt ) ) {
 							$content_post = get_post( $get_last_activity );
-							$content      = $content_post->post_content;
-							$content      = apply_filters( 'the_content', $content );
+							$content      = wp_strip_all_tags( $content_post->post_content );
 							$excerpt      = str_replace( ']]>', ']]&gt;', $content );
 						}
 						if ( ! empty( $excerpt ) ) {
@@ -1262,8 +1290,7 @@ class Ld_Activity extends Widget_Base {
 						$last_activity_excerpt = '';
 						if ( empty( $excerpt ) ) {
 							$content_post = get_post( $get_last_activity );
-							$content      = $content_post->post_content;
-							$content      = apply_filters( 'the_content', $content );
+							$content      = wp_strip_all_tags( $content_post->post_content );
 							$excerpt      = str_replace( ']]>', ']]&gt;', $content );
 						}
 						if ( ! empty( $excerpt ) ) {
@@ -1296,6 +1323,7 @@ class Ld_Activity extends Widget_Base {
 									</div>
 								</div>
 							<?php endif; ?>
+
 							<div class="bb-la__body">
 								<?php if ($settings['switch_course']) : ?>
 									<div class="bb-la__parent"><?php echo $course_title; ?></div>
@@ -1323,11 +1351,13 @@ class Ld_Activity extends Widget_Base {
 					<div class="bb-no-data bb-no-data--ld-activity">
 						<img class="bb-no-data__image" src="<?php echo get_template_directory_uri(); ?>/assets/images/svg/dfy-no-data-icon04.svg" alt="Learndash Activity" />
 						<?php if ( is_user_logged_in() ) { ?>
-							<div class="bb-no-data__msg"><?php _e( 'You don\'t have any ongoing courses.', 'buddyboss-theme' ); ?></div>
+								<div class="bb-no-data__msg"><?php echo esc_html( $settings['no_courses_paragraph_text'] ); ?></div>
 						<?php } else { ?>
 							<div class="bb-no-data__msg"><?php _e( 'You are not logged in.', 'buddyboss-theme' ); ?></div>
 						<?php } ?>
-						<a href="<?php echo esc_url( get_post_type_archive_link('sfwd-courses' ) ); ?>" class="bb-no-data__link"><?php _e( 'Explore Courses', 'buddyboss-theme' ); ?></a>
+						<?php if( '' !== $settings['no_courses_button_text'] ){ ?>
+							<a href="<?php echo esc_url( get_post_type_archive_link('sfwd-courses' ) ); ?>" class="bb-no-data__link"><?php echo esc_html( $settings['no_courses_button_text'] ); ?></a>
+						<?php  } ?>
 					</div>
 				</div>
 

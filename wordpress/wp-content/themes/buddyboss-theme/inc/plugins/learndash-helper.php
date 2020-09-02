@@ -1486,17 +1486,17 @@ if ( !class_exists( '\BuddyBossTheme\LearndashHelper' ) ) {
 
 					$lesson_topics = learndash_get_topic_list( $lesson->ID );
 
-					$navigation_urls[] = get_permalink( $lesson->ID );
+					$navigation_urls[] = trailingslashit( get_permalink( $lesson->ID ) );
 
 					if( ! empty( $lesson_topics ) ) :
 						foreach( $lesson_topics as $lesson_topic ) {
-							$navigation_urls[] = get_permalink( $lesson_topic->ID );
+							$navigation_urls[] = trailingslashit( get_permalink( $lesson_topic->ID ) );
 
 							$topic_quizzes = learndash_get_lesson_quiz_list( $lesson_topic->ID );
 
 							if( ! empty( $topic_quizzes ) ) :
 								foreach( $topic_quizzes as $topic_quiz ) {
-									$navigation_urls[] = get_permalink( $topic_quiz['post']->ID );
+									$navigation_urls[] = trailingslashit( get_permalink( $topic_quiz['post']->ID ) );
 								}
 							endif;
 
@@ -1507,7 +1507,7 @@ if ( !class_exists( '\BuddyBossTheme\LearndashHelper' ) ) {
 
 					if( ! empty( $lesson_quizzes ) ) :
 						foreach( $lesson_quizzes as $lesson_quiz ) {
-							$navigation_urls[] = get_permalink( $lesson_quiz['post']->ID );
+							$navigation_urls[] = trailingslashit( get_permalink( $lesson_quiz['post']->ID ) );
 						}
 					endif;
 				}
@@ -1517,7 +1517,7 @@ if ( !class_exists( '\BuddyBossTheme\LearndashHelper' ) ) {
 			$course_quizzes = learndash_get_course_quiz_list( $course_id );
 			if ( ! empty( $course_quizzes ) ) :
 				foreach( $course_quizzes as $course_quiz ) {
-					$navigation_urls[] = get_permalink( $course_quiz['post']->ID );
+					$navigation_urls[] = trailingslashit( get_permalink( $course_quiz['post']->ID ) );
 				}
 			endif;
 
@@ -1629,11 +1629,12 @@ if ( !class_exists( '\BuddyBossTheme\LearndashHelper' ) ) {
 			if ( empty( $url_arr ) ) {
 				return;
 			}
+
 			// Protocol
 			$url = ( isset( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . '://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
 			// Get current URL
-			$current_url = $url;
+			$current_url = trailingslashit( $url );
 			if ( ! $query = parse_url( $current_url, PHP_URL_QUERY ) ) {
 				$current_url = trailingslashit( $current_url );
 			}

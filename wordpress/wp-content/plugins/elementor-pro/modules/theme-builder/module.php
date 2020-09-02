@@ -350,13 +350,13 @@ class Module extends Module_Base {
 			$admin_notices = Plugin::elementor()->admin->get_component( 'admin-notices' );
 
 			$admin_notices->print_admin_notice( [
-				'title' => __( 'Meet the New Theme Builder: More Intuitive and Visual Than Ever', 'elementor' ),
-				'description' => __( 'With the new Theme Builder you can visually manage every part of your site intuitively, making the task of designing a complete website that much easier', 'elementor' ),
+				'title' => __( 'Meet the New Theme Builder: More Intuitive and Visual Than Ever', 'elementor-pro' ),
+				'description' => __( 'With the new Theme Builder you can visually manage every part of your site intuitively, making the task of designing a complete website that much easier', 'elementor-pro' ),
 				'button' => [
-					'text' => __( 'Try it Now', 'elementor' ),
+					'text' => __( 'Try it Now', 'elementor-pro' ),
 					'class' => 'elementor-button elementor-button-success',
 					'url' => Plugin::elementor()->app->get_settings( 'menu_url' ),
-				]
+				],
 			] );
 		}
 

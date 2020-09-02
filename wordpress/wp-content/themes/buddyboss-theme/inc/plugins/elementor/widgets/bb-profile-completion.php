@@ -167,9 +167,6 @@ class BBP_Profile_Completion extends Widget_Base {
 				'label'     => esc_html__( 'Profile Complete Button', 'buddyboss-theme' ),
 				'type'      => Controls_Manager::SWITCHER,
 				'default'   => 'yes',
-				'condition' => [
-					'skin_style' => 'circle',
-				],
 			] );
 
 		$this->add_control( 'heading_text', [
@@ -211,7 +208,6 @@ class BBP_Profile_Completion extends Widget_Base {
 				'label_block' => true,
 				'separator'   => 'before',
 				'condition'   => [
-					'skin_style'         => 'circle',
 					'switch_profile_btn' => 'yes',
 				],
 			] );
@@ -228,7 +224,6 @@ class BBP_Profile_Completion extends Widget_Base {
 				'label_block' => true,
 				'separator'   => 'before',
 				'condition'   => [
-					'skin_style'         => 'circle',
 					'switch_profile_btn' => 'yes',
 				],
 			] );
@@ -530,7 +525,6 @@ class BBP_Profile_Completion extends Widget_Base {
 				'label'     => esc_html__( 'Button', 'buddyboss-theme' ),
 				'tab'       => Controls_Manager::TAB_STYLE,
 				'condition' => [
-					'skin_style'         => 'circle',
 					'switch_profile_btn' => 'yes',
 				],
 			] );
@@ -699,7 +693,7 @@ class BBP_Profile_Completion extends Widget_Base {
                 <div class="profile_bit_wrapper profile_bit_wrapper--blank"></div>
 			    <?php
 			} else { ?>
-                <div class="profile_bit_wrapper">
+                <div class="profile_bit_wrapper <?php echo $settings['switch_profile_btn'] ? 'has-profile-button' : ''; ?> ">
                     <div class="profile_bit_figure">
                         <div class="profile_bit <?php echo 'skin-' . $settings_skin; ?> border-<?php echo $settings['box_border_style']; ?>">
                             <div class="progress_container">
@@ -721,8 +715,14 @@ class BBP_Profile_Completion extends Widget_Base {
                                     <div class="progress_bit__data">
                                         <span class="progress_bit__data-num"><?php echo esc_html( $progress_label ); ?><span><?php _e( '%', 'buddyboss-theme' ); ?></span></span>
                                         <span class="progress_bit__data-remark"><?php echo $settings['completion_text']; ?></span>
-                                    </div>
-                                </div>
+									</div>
+								</div>
+								<?php if ( $settings['switch_profile_btn'] &&  'linear' == $settings['skin_style'] ) { ?>
+									<div class="profile_bit_action">
+										<a class="profile_bit_action__link" href="<?php echo bp_loggedin_user_domain() . 'profile/edit/'; ?>"><?php echo ( $user_progress['completion_percentage'] == 100 ) ? $settings['edit_button_text'] : $settings['completion_button_text']; ?>
+											<i class="bb-icon-angle-right"></i></a>
+									</div>
+								<?php } ?>
                             </div>
                             <div class="profile_bit__details">
 								<?php if ( $settings['switch_heading'] ) : ?>
@@ -764,7 +764,7 @@ class BBP_Profile_Completion extends Widget_Base {
                                 </ul>
                             </div>
                         </div>
-						<?php if ( $settings['switch_profile_btn'] ) { ?>
+						<?php if ( $settings['switch_profile_btn'] &&  'circle' == $settings['skin_style']) { ?>
                             <div class="profile_bit_action">
                                 <a class="profile_bit_action__link" href="<?php echo bp_loggedin_user_domain() . 'profile/edit/'; ?>"><?php echo ( $user_progress['completion_percentage'] == 100 ) ? $settings['edit_button_text'] : $settings['completion_button_text']; ?>
                                     <i class="bb-icon-angle-right"></i></a>

@@ -317,7 +317,8 @@ if ( !function_exists( 'boss_generate_option_css' ) ) {
             div.profile_completion_wrap ul.pc_detailed_progress li.incomplete span.section_name a:hover,
             .bb-document-theater .bb-media-section.bb-media-no-preview .img-section a.download-button:hover,
             .bb-document-theater .bb-media-section .img-section img > .download-button:hover,
-            div.profile_completion_wrap ul.pc_detailed_progress li.incomplete span.section_name a:hover {
+            .bb-forums .bb-forums__list .bb-forums__item .item-meta .bs-replied > a:hover,
+            .bb-forums .bb-forums__list .bb-forums__item .item-title > a:hover {
                 color: <?php echo $secondary_color; ?>;
             }
 
@@ -433,7 +434,8 @@ if ( !function_exists( 'boss_generate_option_css' ) ) {
             .bb-header-buttons a.button.outline,
             .primary-menu > .menu-item-has-children:not(.hideshow):after,
             .site-header .hideshow .more-button > i,
-			.site-header i, .site-header .notification-dropdown i, .site-header .header-search-wrap i {
+            .site-header i, .site-header .notification-dropdown i, .site-header .header-search-wrap i,
+            .user-wrap.menu-item-has-children #header-my-account-menu a {
                 color: <?php echo buddyboss_theme_get_option( 'header_links' ); ?>;
             }
 
@@ -469,7 +471,9 @@ if ( !function_exists( 'boss_generate_option_css' ) ) {
             .site-header .sub-menu .current-menu-ancestor > a,
             .site-header .sub-menu .current-menu-item > a,
             .site-header .sub-menu .current-menu-item > a > i,
-            .bp-messages-content .actions .message_actions .message_action__list li a:hover {
+            .bp-messages-content .actions .message_actions .message_action__list li a:hover,
+            .user-wrap.menu-item-has-children #header-my-account-menu a:hover,
+            .user-wrap.menu-item-has-children #header-my-account-menu a:hover > i {
                 color: <?php echo buddyboss_theme_get_option( 'header_submenu_active' ); ?>;
             }
 
@@ -1277,6 +1281,7 @@ if ( !function_exists( 'boss_generate_option_bp_css' ) ) {
             #buddypress .bp-navs.bb-bp-tab-nav,
             .groups.group-admin #buddypress #item-body .bp-navs.group-subnav,
             #item-body #group-invites-container .bp-navs.group-subnav,
+            .bp-nouveau-activity-form-placeholder- #whats-new-avatar,
             .activity-update-form #whats-new-avatar,
             #item-body > div.profile p.bp-feedback,
             .groups.group-create .buddypress-wrap #group-create-tabs,
@@ -1303,6 +1308,7 @@ if ( !function_exists( 'boss_generate_option_bp_css' ) ) {
                 background: <?php echo buddyboss_theme_get_option( 'body_blocks' ) ?>;
             }
 
+            #whats-new-form-placeholder,
             #whats-new-form,
             .activity-anonymous-options,
             .buddypress-wrap .bp-tables-user,
@@ -1353,6 +1359,7 @@ if ( !function_exists( 'boss_generate_option_bp_css' ) ) {
             .item-list.groups-list .list-wrap,
 			.item-list.bp-search-results-list .list-wrap,
             #item-body > div.profile,
+            #whats-new-form-placeholder,
             #whats-new-form,
             .bb-bp-settings-container,
             #buddypress .bp-navs.bb-bp-tab-nav,

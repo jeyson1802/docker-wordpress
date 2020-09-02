@@ -184,7 +184,7 @@
 									options.at = BBElementorSectionsEditor.atIndex;
 								}
 
-								elementor.sections.currentView.addChildModel(data.content, options);
+								elementor.previewView.addChildModel(data.content, options);
 
 								elementor.channels.data.trigger('template:after:insert', templateModel);
 
@@ -623,8 +623,8 @@
                             $section = $this.closest('.elementor-top-section'),
                             modelID = $section.data('model-cid');
 
-                        if (window.elementor.sections.currentView.collection.length) {
-                            $.each(window.elementor.sections.currentView.collection.models, function (index, model) {
+                        if (window.elementor.previewView.collection.length) {
+                            $.each(window.elementor.previewView.collection.models, function (index, model) {
                                 if (modelID === model.cid) {
                                     BBElementorSectionsEditor.atIndex = index;
                                 }

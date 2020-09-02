@@ -61,6 +61,8 @@ if ( !class_exists( '\BuddyBossTheme\BuddyPressHelper' ) ) {
 
 			add_filter( 'heartbeat_received', [ $this, 'heartbeat_unread_notifications' ], 11 );
 			add_filter( 'heartbeat_nopriv_received', [ $this, 'heartbeat_unread_notifications' ], 11 );
+
+			add_action( 'admin_footer', [ $this, 'buddyboss_theme_header_menu_admin_js'], 999 ); // For back-end
 		}
 
 		public function is_active() {
@@ -396,6 +398,47 @@ if ( !class_exists( '\BuddyBossTheme\BuddyPressHelper' ) ) {
 
 			return $response;
 		}
+
+		function buddyboss_theme_header_menu_admin_js() {
+
+			$menu = wp_nav_menu(
+				array (
+					'theme_location' => 'header-my-account',
+					'echo' => FALSE,
+					'fallback_cb' => '__return_false'
+				)
+			);
+
+			if ( ! empty ( $menu ) ) {
+				?>
+				<script type="text/javascript">
+					jQuery(document).ready( function(){
+						if( jQuery( '.admin-bar #wp-admin-bar-my-account-default' ).length ) {
+							jQuery( '.admin-bar #wp-admin-bar-my-account-default > li' ).each( function() {
+								if( jQuery( this ).hasClass( 'menupop' ) ) {
+									jQuery( this ).closest( 'ul' ).addClass( 'has-menupop' );
+									return false; // Break loop as we know this menu item has icon.
+								}
+							});
+						}
+					});
+				</script>
+				<style type="text/css">
+					ul#wp-admin-bar-my-account-default{
+						background-color: #464b50;
+					}
+					ul#wp-admin-bar-my-account-default.has-menupop + #wp-admin-bar-my-account-buddypress li:not(.menupop),
+					#wp-admin-bar-my-account-default.has-menupop > li:not(.menupop) {
+						padding-left: 16px;
+					}
+					#wp-admin-bar-user-actions #wp-admin-bar-user-info {
+						margin-bottom: 10px;
+					}
+				</style>
+				<?php
+			}
+		}
+
 	}
 
 }

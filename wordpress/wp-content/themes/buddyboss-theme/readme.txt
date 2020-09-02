@@ -1,8 +1,8 @@
 === BuddyBoss Theme ===
 Contributors: BuddyBoss
 Requires at least: 4.9.1
-Tested up to: 5.5
-Version: 1.5.6
+Tested up to: 5.5.1
+Version: 1.5.7
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -18,6 +18,21 @@ BuddyBoss Theme is a community theme for the BuddyBoss Platform.
 4. Upload the file 'buddyboss-theme-child.zip'
 
 == Changelog ==
+
+= 1.5.7 =
+* Activity - Added styling for new 'Edit Activity' feature from BuddyBoss Platform
+* Profiles - Added styling for new Custom Profile dropdown feature from BuddyBoss Platform
+* Forums - Fixed formatting issue in Discussion reply editor
+* Elementor - Fixed Elementor 3.0 compatibility issues
+* Elementor - Improved layout widgets, Custom Sections, and 'Dashboard' page template
+* LearnDash - Fixed Course cover photo issue caused by a conflict with WordPress 5.5
+* LearnDash - Fixed closed Course sample lesson permission issue
+* LearnDash - Improved single LearnDash Group layout
+* LearnDash - Fixed Course status to show in a different language other than English
+* WooCommerce - Fixed issue related to product quantity in the cart
+* WooCommerce - Fixed empty Sidebar issue on the shop page
+* GamiPress - Fixed Achievement widget earner list layout
+* Translations - Updated German (formal) language files
 
 = 1.5.6 =
 * Elementor - Fixed issues with layout widgets

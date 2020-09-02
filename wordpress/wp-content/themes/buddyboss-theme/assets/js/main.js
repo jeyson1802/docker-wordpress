@@ -2008,6 +2008,47 @@
 		}
 	);
 
+	/**
+	 * Profile Dropdown Menu
+	 */
+
+	 if( $( '#header-my-account-menu' ).length ) {
+
+		$( '#header-my-account-menu > li' ).each(
+			function () {
+				if( $( this ).hasClass( 'icon-added' ) ) {
+					$( this ).closest( 'ul' ).addClass( 'has-icon' );
+					return false; // Break loop as we know this menu item has icon.
+				}
+			}
+		);
+
+		$( '#header-my-account-menu ul' ).each(
+			function () {
+				$( this ).children( 'li' ).each( function() {
+					if( $( this ).hasClass( 'icon-added' ) ) {
+						$( this ).closest( 'ul' ).addClass( 'has-icon' );
+						return false; // Break loop as we know this menu item has icon.
+					}
+				});
+			}
+		);
+
+	}
+
+	/**
+	 * WP Profile Dropdown Menu
+	 */
+
+	if( $( '.admin-bar #wp-admin-bar-my-account-default' ).length ) {
+		$( '.admin-bar #wp-admin-bar-my-account-default > li' ).each( function() {
+			if( $( this ).hasClass( 'menupop' ) ) {
+				$( this ).closest( 'ul' ).addClass( 'has-menupop' );
+				return false; // Break loop as we know this menu item has icon.
+			}
+		});
+	}
+
 })( jQuery );
 
 /**

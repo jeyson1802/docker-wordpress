@@ -1,4 +1,4 @@
-/*! elementor-pro - v3.0.2 - 31-08-2020 */
+/*! elementor-pro - v3.0.3 - 02-09-2020 */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -5975,7 +5975,7 @@ function PartActionsButtons(props) {
     })), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_appUi.Button, {
       className: "eps-popover__item eps-popover__item--danger",
       icon: "eicon-trash-o",
-      text: __('Delete', 'elementor-pro'),
+      text: __('Trash', 'elementor-pro'),
       onClick: function onClick() {
         return handlers.delete(props.id);
       }
@@ -7525,12 +7525,12 @@ function DialogDelete(props) {
   }
 
   return /*#__PURE__*/_react.default.createElement(_appUi.Dialog, {
-    title: __('Delete Part', 'elementor-pro'),
-    text: __('Are you sure you want to delete this item', 'elementor-pro') + " ".concat(template.title),
+    title: __('Move Item To Trash', 'elementor-pro'),
+    text: __('Are you sure you want to move this item to trash:', 'elementor-pro') + " \"".concat(template.title, "\""),
     onSubmit: function onSubmit() {
       return closeDialog(true);
     },
-    approveButtonText: __('Delete', 'elementor-pro'),
+    approveButtonText: __('Move to Trash', 'elementor-pro'),
     approveButtonOnClick: function approveButtonOnClick() {
       return closeDialog(true);
     },

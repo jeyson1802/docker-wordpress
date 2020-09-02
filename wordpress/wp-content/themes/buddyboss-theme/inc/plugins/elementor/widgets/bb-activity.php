@@ -238,6 +238,47 @@ class BBP_Activity extends Widget_Base {
 		$this->end_controls_section();
 
 		$this->start_controls_section(
+			'section_content',
+			[
+				'label' => __( 'Content', 'buddyboss-theme' ),
+				'tab' => Controls_Manager::TAB_CONTENT,
+			]
+		);
+
+		$this->add_control(
+			'heading_text',
+			[
+				'label' => __( 'Heading Text', 'buddyboss-theme' ),
+				'type' => Controls_Manager::TEXT,
+				'dynamic' => [
+					'active' => true,
+				],
+				'default' => __( 'Activity', 'buddyboss-theme' ),
+				'placeholder' => __( 'Enter heading text', 'buddyboss-theme' ),
+				'label_block' => true
+			]
+		);
+
+		$this->add_control(
+			'activity_link_text',
+			[
+				'label' => __( 'Activity Link Text', 'buddyboss-theme' ),
+				'type' => Controls_Manager::TEXT,
+				'dynamic' => [
+					'active' => true,
+				],
+				'default' => __( 'All Activity', 'buddyboss-theme' ),
+				'placeholder' => __( 'Enter activity link text', 'buddyboss-theme' ),
+				'label_block' => true,
+				'condition' => [
+					'switch_more' => 'yes',
+				]
+			]
+		);
+
+		$this->end_controls_section();
+
+		$this->start_controls_section(
 			'section_style_box',
 			array(
 				'label' => esc_html__( 'Box', 'buddyboss-theme' ),
@@ -580,10 +621,12 @@ class BBP_Activity extends Widget_Base {
 			<?php if ( $has_activity ) : ?>
 
 				<div class="bb-block-header flex align-items-center">
-					<div class="bb-block-header__title"><h3><?php _e( 'Activity', 'buddyboss-theme' ); ?></h3></div>
+					<div class="bb-block-header__title"><h3><?php echo esc_html( $settings['heading_text'] ); ?></h3></div>
 					<?php if ( $settings['switch_more'] ) : ?>
 						<div class="bb-block-header__extra push-right">
-							<a href="<?php echo bp_get_activity_root_slug(); ?>" class="count-more"><?php _e( 'All activity', 'buddyboss-theme' ); ?><i class="bb-icon-chevron-right"></i></a>
+							<?php if( '' != $settings['activity_link_text'] ) { ?>
+								<a href="<?php echo bp_get_activity_root_slug(); ?>" class="count-more"><?php echo esc_html( $settings['activity_link_text'] ); ?><i class="bb-icon-chevron-right"></i></a>
+							<?php } ?>
 						</div>
 					<?php endif; ?>
 				</div>
@@ -595,7 +638,7 @@ class BBP_Activity extends Widget_Base {
 								<div id="activity-stream" class="activity" data-ajax="false" data-bp-list="activity">
 									<ul class="activity-lists item-list bp-list elementor-activity-widget">
 										<?php while ( bp_activities() ) : bp_the_activity(); ?>
-											<li class="<?php bp_activity_css_class(); ?>" id="activity-<?php bp_activity_id(); ?>" data-bp-activity-id="<?php bp_activity_id(); ?>" data-bp-timestamp="<?php bp_nouveau_activity_timestamp(); ?>">
+											<li class="<?php bp_activity_css_class(); ?>" id="activity-<?php bp_activity_id(); ?>" data-bp-activity-id="<?php bp_activity_id(); ?>" data-bp-timestamp="<?php bp_nouveau_activity_timestamp(); ?>" data-bp-activity="<?php bp_nouveau_edit_activity_data(); ?>" >
 
 												<div class="bp-activity-head">
 													<?php if ($settings['switch_avatar']) : ?>

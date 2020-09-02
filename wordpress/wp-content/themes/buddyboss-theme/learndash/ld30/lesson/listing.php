@@ -20,6 +20,7 @@ global $course_pager_results;
 
 $lesson_progress = learndash_lesson_progress( $lesson['post'], $course_id );
 $has_pagination  = ( isset($course_pager_results[ $lesson['post']->ID ]['pager']) ? true : false );
+$is_sample       = learndash_is_sample( $lesson['post']->ID );
 $table_class     = 'ld-table-list ld-topic-list'
                     . ( isset($is_sample) && $is_sample == 'on' ? ' is_sample' : '' )
                     . ( !$has_pagination ? ' ld-no-pagination' : '' );

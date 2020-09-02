@@ -32,7 +32,7 @@ if ( $max_value && $min_value === $max_value ) {
         <label class="screen-reader-text" for="<?php echo esc_attr( $input_id ); ?>"><?php echo esc_attr( $label ); ?></label>
         <div class="bs-quantity">
             <div class="qty-nav">
-                <div class="quantity-button quantity-down">-</div>
+                <div class="quantity-button quantity-down <?php echo ( $input_value === $min_value ? esc_attr( 'limit' ) : '' ) ?>">-</div>
             </div>
             <input
                     type="number"
@@ -49,7 +49,7 @@ if ( $max_value && $min_value === $max_value ) {
                     inputmode="<?php echo esc_attr( $inputmode ); ?>"
                     aria-labelledby="<?php echo ! empty( $args['product_name'] ) ? sprintf( esc_attr__( '%s quantity', 'buddyboss-theme' ), $args['product_name'] ) : ''; ?>"/>
             <div class="qty-nav">
-                <div class="quantity-button quantity-up">+</div>
+                <div class="quantity-button quantity-up <?php echo ( 0 < $max_value && $input_value === $max_value ? esc_attr( 'limit' ) : '' ) ?>">+</div>
             </div>
         </div>
 	    <?php do_action( 'woocommerce_after_quantity_input_field' ); ?>

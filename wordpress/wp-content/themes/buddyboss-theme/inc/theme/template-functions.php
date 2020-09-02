@@ -1432,7 +1432,7 @@ if ( ! function_exists( 'buddyboss_theme_add_logout_link' ) ) {
 					'menu_class'     => 'bb-my-account-menu',
 				)
 			);
-			echo '<li class="logout-link"><a href="' . esc_url( wp_logout_url() ) . '">' . __( 'Logout', 'buddyboss-theme' ) . '</a></li>';
+			echo '<li class="logout-link"><a href="' . esc_url( wp_logout_url() ) . '">' . __( 'Log Out', 'buddyboss-theme' ) . '</a></li>';
 		}
 	}
 

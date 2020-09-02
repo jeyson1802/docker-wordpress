@@ -36,8 +36,33 @@ $show_shopping_cart = buddyboss_theme_get_option( 'shopping_cart' );
 									</span>
 								</a>
 							</li>
-
-							<?php do_action( THEME_HOOK_PREFIX . 'header_user_menu_items' ); ?>
+                            <?php
+                            if ( function_exists( 'bp_is_active' ) ) {
+	                            $menu = wp_nav_menu(
+		                            array (
+			                            'theme_location' => 'header-my-account',
+			                            'echo' => FALSE,
+			                            'fallback_cb' => '__return_false'
+		                            )
+	                            );
+	                            if ( ! empty ( $menu ) ) {
+		                            wp_nav_menu(
+			                            array(
+				                            'theme_location' => 'header-my-account',
+				                            'menu_id'        => 'header-my-account-menu',
+				                            'container'      => false,
+				                            'fallback_cb'    => '',
+				                            'walker'         => new BuddyBoss_SubMenuWrap(),
+				                            'menu_class'     => 'bb-my-account-menu',
+			                            )
+		                            );
+                                } else {
+		                            do_action( THEME_HOOK_PREFIX . 'header_user_menu_items' );
+                                }
+                            } else {
+	                            do_action( THEME_HOOK_PREFIX . 'header_user_menu_items' );
+                            }
+                            ?>
 						</ul>
 					</div>
 				</div>

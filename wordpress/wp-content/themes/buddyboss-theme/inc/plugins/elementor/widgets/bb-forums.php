@@ -179,6 +179,47 @@ class BBP_Forums extends Widget_Base {
 		$this->end_controls_section();
 
 		$this->start_controls_section(
+			'section_content',
+			[
+				'label' => __( 'Content', 'buddyboss-theme' ),
+				'tab' => Controls_Manager::TAB_CONTENT,
+			]
+		);
+
+		$this->add_control(
+			'heading_text',
+			[
+				'label' => __( 'Heading Text', 'buddyboss-theme' ),
+				'type' => Controls_Manager::TEXT,
+				'dynamic' => [
+					'active' => true,
+				],
+				'default' => __( 'Forums', 'buddyboss-theme' ),
+				'placeholder' => __( 'Enter heading text', 'buddyboss-theme' ),
+				'label_block' => true
+			]
+		);
+
+		$this->add_control(
+			'forum_link_text',
+			[
+				'label' => __( 'Forum Link Text', 'buddyboss-theme' ),
+				'type' => Controls_Manager::TEXT,
+				'dynamic' => [
+					'active' => true,
+				],
+				'default' => __( 'All Forums', 'buddyboss-theme' ),
+				'placeholder' => __( 'Enter forum link text', 'buddyboss-theme' ),
+				'label_block' => true,
+				'condition' => [
+					'switch_more' => 'yes',
+				]
+			]
+		);
+
+		$this->end_controls_section();
+
+		$this->start_controls_section(
 			'section_style_box',
 			[
 				'label'     => esc_html__( 'Box', 'buddyboss-theme' ),
@@ -475,10 +516,12 @@ class BBP_Forums extends Widget_Base {
 			<?php if ( bbp_has_topics( $args ) ) : ?>
 
 				<div class="bb-block-header flex align-items-center">
-					<div class="bb-block-header__title"><h3><?php _e( 'Forums', 'buddyboss-theme' ); ?></h3></div>
+					<div class="bb-block-header__title"><h3><?php echo esc_html( $settings['heading_text'] ); ?></h3></div>
 					<?php if ($settings['switch_more']) : ?>
 						<div class="bb-block-header__extra push-right">
-						<a href="<?php echo home_url(bbp_get_root_slug()); ?>" class="count-more"><?php _e( 'All forums', 'buddyboss-theme' ); ?><i class="bb-icon-chevron-right"></i></a>
+						<?php if( '' != $settings['forum_link_text'] ) { ?>
+							<a href="<?php echo home_url(bbp_get_root_slug()); ?>" class="count-more"><?php echo esc_html( $settings['forum_link_text'] ); ?><i class="bb-icon-chevron-right"></i></a>
+						<?php } ?>
 						</div>
 					<?php endif; ?>
 				</div>

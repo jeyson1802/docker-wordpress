@@ -37,96 +37,44 @@
                 return h.replace( /\(/g, '<span>' ).replace( /\)/, '</span>' );
             } );
 
-            function wcProductQty() {
-                $( 'form.cart .bs-quantity' ).each( function () {
-                    var spinner = $( this ),
-                        input = spinner.find( 'input[type="number"]' ),
-                        btnUp = spinner.find( '.quantity-up' ),
-                        btnDown = spinner.find( '.quantity-down' ),
-                        min = input.attr( 'min' ),
-                        max = input.attr( 'max' );
+            $( document ).on( 'click', '.bs-quantity .quantity-button:not(".limit")', function () {
+                var input_qty = $( this ).parents( '.bs-quantity' ).find( 'input' ),
+                    oldValue = input_qty.val(),
+                    newVal = oldValue,
+                    min = input_qty.attr( 'min' ),
+                    max = input_qty.attr( 'max' );
 
-                    btnUp.click( function () {
-                        var oldValue = parseFloat( input.val() );
-                        if ( max.length === 0 ) {
-                            var newVal = oldValue + 1;
-                        } else {
-                            if ( oldValue >= max ) {
-                                var newVal = oldValue;
-                            } else {
-                                var newVal = oldValue + 1;
-                            }
-                        }
-                        spinner.find( "input" ).val( newVal );
-                        spinner.find( "input" ).trigger( "change" );
-                    } );
+                if ( oldValue == 0 ) {
+                    $( this ).parents( '.bs-quantity' ).find( '.quantity-down' ).addClass( 'limit' );
+                }
 
-                    btnDown.click( function () {
-                        var oldValue = parseFloat( input.val() );
-                        if ( oldValue <= min ) {
-                            var newVal = oldValue;
-                        } else {
-                            var newVal = oldValue - 1;
-                        }
-                        spinner.find( "input" ).val( newVal );
-                        spinner.find( "input" ).trigger( "change" );
-                    } );
-
-                } );
-            }
-
-            function wcCartQty() {
-                $( '.woocommerce-cart-form .bs-quantity' ).each( function () {
-                    var spinner = $( this ),
-                        input = spinner.find( 'input[type="number"]' ),
-                        btnUp = spinner.find( '.quantity-up' ),
-                        btnDown = spinner.find( '.quantity-down' ),
-                        min = input.attr( 'min' ),
-                        max = input.attr( 'max' ),
-                        curValue = parseFloat( input.val() );
-                    if ( curValue == 0 ) {
-                        btnDown.addClass( 'limit' );
+                if ( $( this ).hasClass( 'quantity-up' ) ) {
+                    $( this ).parents( '.bs-quantity' ).find( '.quantity-down' ).removeClass( 'limit' );
+                    if ( parseInt( oldValue ) == parseInt( max ) - 1 ) {
+                        $( this ).parents( '.bs-quantity' ).find( '.quantity-up' ).addClass( 'limit' );
                     }
-
-                    btnUp.click( function () {
-                        var oldValue = parseFloat( input.val() );
-                        btnDown.removeClass( 'limit' );
-                        if ( oldValue == max - 1 ) {
-                            btnUp.addClass( 'limit' );
-                        }
-                        if ( max.length === 0 ) {
-                            var newVal = oldValue + 1;
+                    if ( max.length === 0 ) {
+                        newVal = parseInt( oldValue ) + 1;
+                    } else {
+                        if ( parseInt( oldValue ) >= parseInt( max ) ) {
+                            newVal = parseInt( oldValue );
                         } else {
-                            if ( oldValue >= max ) {
-                                var newVal = oldValue;
-                            } else {
-                                var newVal = oldValue + 1;
-                            }
+                            newVal = parseInt( oldValue ) + 1;
                         }
-                        spinner.find( "input" ).val( newVal );
-                        spinner.find( "input" ).trigger( "change" );
-                    } );
-
-                    btnDown.click( function () {
-                        var oldValue = parseFloat( input.val() );
-                        if ( oldValue == min + 1 ) {
-                            btnDown.addClass( 'limit' );
-                        }
-                        if ( oldValue <= min ) {
-                            var newVal = oldValue;
-                        } else {
-                            var newVal = oldValue - 1;
-                            btnUp.removeClass( 'limit' );
-                        }
-                        spinner.find( "input" ).val( newVal );
-                        spinner.find( "input" ).trigger( "change" );
-                    } );
-
-                } );
-            }
-
-            wcProductQty();
-            wcCartQty();
+                    }
+                } else {
+                    if ( parseInt( oldValue ) == parseInt( min ) + 1 ) {
+                        $( this ).parents( '.bs-quantity' ).find( '.quantity-down' ).addClass( 'limit' );
+                    }
+                    if ( parseInt( oldValue ) <= parseInt( min ) ) {
+                        newVal = parseInt( oldValue );
+                    } else {
+                        newVal = parseInt( oldValue ) - 1;
+                        $( this ).parents( '.bs-quantity' ).find( '.quantity-up' ).removeClass( 'limit' );
+                    }
+                }
+                $( this ).parents( '.bs-quantity' ).find( 'input' ).val( parseInt( newVal ) ).trigger( 'change' );
+            } );
 
             $( document ).on( "change", "form[name='checkout'] input[name='payment_method']", function () {
                 if ( $( this ).is( ':checked' ) ) {

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-11 15:30:49+00:00\n"
+"POT-Creation-Date: 2020-09-02 12:52:09+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -58,8 +58,8 @@ msgstr ""
 #: learndash/ld30/shortcodes/profile.php:119
 #: lifterlms/course/course-index.php:20
 #: lifterlms/membership/membership-index.php:20 searchform.php:15
-#: template-parts/bbpress-banner.php:108 template-parts/header-aside.php:63
-#: template-parts/header-aside.php:83 template-parts/header-mobile.php:58
+#: template-parts/bbpress-banner.php:108 template-parts/header-aside.php:88
+#: template-parts/header-aside.php:108 template-parts/header-mobile.php:58
 #: template-parts/header-mobile.php:70
 msgid "Search"
 msgstr ""
@@ -321,16 +321,16 @@ msgstr ""
 #: bbpress/loop-replies.php:105 bbpress/loop-search-topic.php:39
 #: bbpress/loop-topic-list.php:40
 #: inc/plugins/buddyboss-menu-icons/vendor/kucrut/icon-picker/includes/types/buddyboss.php:1492
-#: inc/plugins/elementor/widgets/bb-forums.php:522
+#: inc/plugins/elementor/widgets/bb-forums.php:565
 #: inc/plugins/elementor/widgets/bb-members.php:40
-#: inc/plugins/elementor/widgets/bb-members.php:569
+#: inc/plugins/elementor/widgets/bb-members.php:254
 #: lifterlms/profile/members.php:25
 msgid "Members"
 msgstr ""
 
 #: bbpress/loop-replies.php:105 bbpress/loop-search-topic.php:39
 #: bbpress/loop-topic-list.php:40
-#: inc/plugins/elementor/widgets/bb-forums.php:522
+#: inc/plugins/elementor/widgets/bb-forums.php:565
 msgid "Member"
 msgstr ""
 
@@ -362,8 +362,8 @@ msgstr ""
 
 #: bbpress/loop-search-reply.php:16 bbpress/loop-search-topic.php:34
 #: bbpress/loop-topic-list.php:35
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:899
-#: inc/plugins/elementor/widgets/bb-forums.php:516
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:928
+#: inc/plugins/elementor/widgets/bb-forums.php:559
 msgid "replied"
 msgstr ""
 
@@ -590,7 +590,7 @@ msgid "You have sent invitation emails to the following people:"
 msgstr ""
 
 #: buddypress/members/single/invites/sent-invites.php:65
-#: inc/plugins/elementor/widgets/bb-members.php:511
+#: inc/plugins/elementor/widgets/bb-members.php:552
 #: inc/plugins/elementor/widgets/bb-review.php:548
 msgid "Name"
 msgstr ""
@@ -665,7 +665,7 @@ msgstr ""
 
 #: buddypress/members/single/profile/profile-loop.php:16
 #: buddypress/members/single/profile.php:14
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:226
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:222
 #: paid-memberships-pro/pages/account.php:111
 msgid "Edit Profile"
 msgstr ""
@@ -701,7 +701,7 @@ msgid "No results for '%s'"
 msgstr ""
 
 #: buddypress.php:30 inc/lib/buddyboss-updater/includes/views/package.php:37
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:696
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:690
 #: inc/plugins/lifterlms-helper.php:1615 inc/plugins/lifterlms-helper.php:1694
 #: inc/theme/login.php:397 inc/theme/template-functions.php:693
 #: learndash/ld30/lesson/partials/row.php:117
@@ -882,8 +882,8 @@ msgstr ""
 #: inc/admin/admin-init.php:309 inc/admin/admin-init.php:385
 #: inc/plugins/elementor/widgets/bb-dashboard-grid.php:663
 #: inc/plugins/elementor/widgets/bb-dashboard-intro.php:204
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:238
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:297
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:267
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:326
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:682
 #: inc/plugins/elementor/widgets/bb-review.php:739
 #: inc/plugins/elementor/widgets/bb-tabs.php:684
@@ -1032,15 +1032,15 @@ msgid "Font Size"
 msgstr ""
 
 #: inc/admin/buddyboss-extensions/extensions/bb_typography/bb_typography/field_bb_typography.php:454
-#: inc/plugins/elementor/widgets/bb-activity.php:321
+#: inc/plugins/elementor/widgets/bb-activity.php:362
 #: inc/plugins/elementor/widgets/bb-dashboard-grid.php:362
 #: inc/plugins/elementor/widgets/bb-dashboard-intro.php:170
-#: inc/plugins/elementor/widgets/bb-forums.php:265
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:704
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:848
+#: inc/plugins/elementor/widgets/bb-forums.php:306
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:733
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:877
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:835
-#: inc/plugins/elementor/widgets/bb-members.php:358
-#: inc/plugins/elementor/widgets/bb-members.php:462
+#: inc/plugins/elementor/widgets/bb-members.php:399
+#: inc/plugins/elementor/widgets/bb-members.php:503
 #: inc/plugins/elementor/widgets/bb-tabs.php:998
 msgid "Size"
 msgstr ""
@@ -1582,26 +1582,26 @@ msgstr ""
 
 #: inc/admin/options-init.php:871
 #: inc/custom-fonts/classes/class-buddyboss-custom-fonts-cpt.php:200
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:287
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:337
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:387
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:437
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:570
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:762
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:316
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:366
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:416
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:466
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:599
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:791
 #: inc/plugins/elementor/widgets/bb-gallery.php:447
 #: inc/plugins/elementor/widgets/bb-gallery.php:476
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:355
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:405
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:455
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:588
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:1128
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:384
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:434
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:484
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:617
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:1157
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:416
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:448
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:539
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:583
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:634
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:827
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:604
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:598
 #: inc/plugins/elementor/widgets/bb-tabs.php:430
 #: inc/plugins/elementor/widgets/bb-tabs.php:532
 #: inc/plugins/elementor/widgets/bb-tabs.php:561
@@ -1897,7 +1897,7 @@ msgstr ""
 #: inc/plugins/elementor/widgets/bb-dashboard-grid.php:101
 #: inc/plugins/elementor/widgets/bb-gallery.php:112
 #: inc/plugins/elementor/widgets/bb-gallery.php:437
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:384
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:413
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:427
 #: inc/plugins/elementor/widgets/bb-review.php:502
 #: inc/plugins/elementor/widgets/bb-review.php:563
@@ -2077,7 +2077,7 @@ msgstr ""
 
 #: inc/admin/options-init.php:1798
 #: inc/plugins/elementor/widgets/bb-forums.php:40
-#: inc/plugins/elementor/widgets/bb-forums.php:478
+#: inc/plugins/elementor/widgets/bb-forums.php:197
 #: template-parts/header-profile-menu.php:337
 msgid "Forums"
 msgstr ""
@@ -2131,7 +2131,7 @@ msgid "Select text color for banner area."
 msgstr ""
 
 #: inc/admin/options-init.php:1866
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:266
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:295
 msgid "Forum Title"
 msgstr ""
 
@@ -2372,9 +2372,9 @@ msgstr ""
 #: inc/custom-fonts/classes/class-buddyboss-custom-fonts-cpt.php:268
 #: inc/custom-fonts/classes/class-buddyboss-custom-fonts-cpt.php:346
 #: inc/plugins/elementor/widgets/bb-dashboard-grid.php:487
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:483
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:675
-#: inc/plugins/elementor/widgets/bb-forums.php:375
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:512
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:704
+#: inc/plugins/elementor/widgets/bb-forums.php:416
 #: inc/plugins/elementor/widgets/bb-gallery.php:518
 #: inc/plugins/elementor/widgets/bb-gallery.php:637
 #: inc/plugins/elementor/widgets/bb-header-bar.php:670
@@ -2382,12 +2382,12 @@ msgstr ""
 #: inc/plugins/elementor/widgets/bb-header-bar.php:916
 #: inc/plugins/elementor/widgets/bb-header-bar.php:1020
 #: inc/plugins/elementor/widgets/bb-header-bar.php:1084
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:501
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:732
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:1041
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:530
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:761
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:1070
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:894
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:1017
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:541
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:535
 #: inc/plugins/elementor/widgets/bb-tabs.php:602
 #: inc/plugins/elementor/widgets/bb-tabs.php:1211
 msgid "Normal"
@@ -2665,32 +2665,32 @@ msgstr ""
 msgid "License Keys"
 msgstr ""
 
-#: inc/lib/buddyboss-updater/includes/admin.php:511
+#: inc/lib/buddyboss-updater/includes/admin.php:518
 msgid "Dismiss this notice."
 msgstr ""
 
-#: inc/lib/buddyboss-updater/includes/admin.php:543
+#: inc/lib/buddyboss-updater/includes/admin.php:550
 msgid "activate your product licenses"
 msgstr ""
 
-#: inc/lib/buddyboss-updater/includes/admin.php:544
+#: inc/lib/buddyboss-updater/includes/admin.php:551
 msgid ""
 "<strong>Your BuddyBoss products are almost ready.</strong> To get started, "
 "please %s."
 msgstr ""
 
-#: inc/lib/buddyboss-updater/includes/admin.php:573
+#: inc/lib/buddyboss-updater/includes/admin.php:580
 msgid "here"
 msgstr ""
 
-#: inc/lib/buddyboss-updater/includes/admin.php:574
+#: inc/lib/buddyboss-updater/includes/admin.php:581
 msgid "This license for <strong>%s</strong> is invalid or incomplete. %s"
 msgstr ""
 
-#: inc/lib/buddyboss-updater/includes/admin.php:726
-#: inc/lib/buddyboss-updater/includes/admin.php:758
-#: inc/lib/buddyboss-updater/includes/admin.php:842
-#: inc/lib/buddyboss-updater/includes/admin.php:848
+#: inc/lib/buddyboss-updater/includes/admin.php:733
+#: inc/lib/buddyboss-updater/includes/admin.php:765
+#: inc/lib/buddyboss-updater/includes/admin.php:849
+#: inc/lib/buddyboss-updater/includes/admin.php:855
 msgid ""
 "Your account was successfully connected. No new activations have been made. "
 "If you are attempting to activate a new license key, please make sure that "
@@ -2698,14 +2698,14 @@ msgid ""
 "available in your BuddyBoss.com account."
 msgstr ""
 
-#: inc/lib/buddyboss-updater/includes/admin.php:819
+#: inc/lib/buddyboss-updater/includes/admin.php:826
 msgid ""
 "Congratulations! License keys for the following product(s) have been "
 "activated: %s"
 msgstr ""
 
-#: inc/lib/buddyboss-updater/includes/admin.php:837
-#: inc/lib/buddyboss-updater/includes/admin.php:850
+#: inc/lib/buddyboss-updater/includes/admin.php:844
+#: inc/lib/buddyboss-updater/includes/admin.php:857
 msgid ""
 "The connection was successful, however, no license key was activated. We "
 "could not find any active license in your account, for any of the installed "
@@ -2960,18 +2960,21 @@ msgid "Answer"
 msgstr ""
 
 #: inc/plugins/beaver-builder/header-bar/header-bar.php:75
-#: inc/plugins/elementor/widgets/bb-activity.php:409
+#: inc/plugins/elementor/widgets/bb-activity.php:243
+#: inc/plugins/elementor/widgets/bb-activity.php:450
 #: inc/plugins/elementor/widgets/bb-dashboard-grid.php:229
 #: inc/plugins/elementor/widgets/bb-dashboard-grid.php:466
 #: inc/plugins/elementor/widgets/bb-dashboard-intro.php:89
 #: inc/plugins/elementor/widgets/bb-dashboard-intro.php:271
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:258
-#: inc/plugins/elementor/widgets/bb-forums.php:354
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:287
+#: inc/plugins/elementor/widgets/bb-forums.php:184
+#: inc/plugins/elementor/widgets/bb-forums.php:395
 #: inc/plugins/elementor/widgets/bb-gallery.php:352
 #: inc/plugins/elementor/widgets/bb-header-bar.php:107
 #: inc/plugins/elementor/widgets/bb-ld-activity.php:106
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:289
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:318
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:89
+#: inc/plugins/elementor/widgets/bb-members.php:241
 #: inc/plugins/elementor/widgets/bb-review.php:495
 #: inc/plugins/elementor/widgets/bb-review.php:805
 #: inc/plugins/elementor/widgets/bb-tabs.php:275
@@ -3049,8 +3052,8 @@ msgstr ""
 #: inc/plugins/beaver-builder/header-bar/header-bar.php:186
 #: inc/plugins/elementor/widgets/bb-gallery.php:360
 #: inc/plugins/elementor/widgets/bb-header-bar.php:348
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:875
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:918
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:904
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:947
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:792
 #: inc/plugins/elementor/widgets/bb-members.php:162
 #: inc/plugins/elementor/widgets/bb-profile-completion.php:98
@@ -3127,37 +3130,37 @@ msgstr ""
 
 #: inc/plugins/beaver-builder/header-bar/header-bar.php:352
 #: inc/plugins/elementor/widgets/bb-header-bar.php:755
-#: inc/plugins/elementor/widgets/bb-members.php:326
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:283
+#: inc/plugins/elementor/widgets/bb-members.php:367
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:278
 msgid "None"
 msgstr ""
 
 #: inc/plugins/beaver-builder/header-bar/header-bar.php:353
 #: inc/plugins/elementor/widgets/bb-header-bar.php:751
-#: inc/plugins/elementor/widgets/bb-members.php:322
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:279
+#: inc/plugins/elementor/widgets/bb-members.php:363
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:274
 #: inc/plugins/elementor/widgets/bb-review.php:478
 msgid "Solid"
 msgstr ""
 
 #: inc/plugins/beaver-builder/header-bar/header-bar.php:354
 #: inc/plugins/elementor/widgets/bb-header-bar.php:753
-#: inc/plugins/elementor/widgets/bb-members.php:324
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:281
+#: inc/plugins/elementor/widgets/bb-members.php:365
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:276
 msgid "Dotted"
 msgstr ""
 
 #: inc/plugins/beaver-builder/header-bar/header-bar.php:355
 #: inc/plugins/elementor/widgets/bb-header-bar.php:752
-#: inc/plugins/elementor/widgets/bb-members.php:323
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:280
+#: inc/plugins/elementor/widgets/bb-members.php:364
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:275
 msgid "Dashed"
 msgstr ""
 
 #: inc/plugins/beaver-builder/header-bar/header-bar.php:356
 #: inc/plugins/elementor/widgets/bb-header-bar.php:754
-#: inc/plugins/elementor/widgets/bb-members.php:325
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:282
+#: inc/plugins/elementor/widgets/bb-members.php:366
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:277
 msgid "Double"
 msgstr ""
 
@@ -3415,7 +3418,7 @@ msgstr ""
 #: inc/plugins/elementor/widgets/bb-dashboard-intro.php:96
 #: inc/plugins/elementor/widgets/bb-gallery.php:582
 #: inc/plugins/elementor/widgets/bb-gallery.php:679
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:680
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:709
 #: inc/plugins/elementor/widgets/bb-review.php:863
 msgid "Position"
 msgstr ""
@@ -3567,7 +3570,7 @@ msgstr ""
 #: inc/plugins/buddyboss-menu-icons/vendor/kucrut/icon-picker/includes/types/fa.php:2067
 #: inc/plugins/buddyboss-menu-icons/vendor/kucrut/icon-picker/includes/types/foundation-icons.php:52
 #: inc/plugins/elementor/widgets/bb-gallery.php:505
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:671
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:700
 msgid "Arrows"
 msgstr ""
 
@@ -3652,7 +3655,7 @@ msgstr ""
 #: inc/plugins/buddyboss-menu-icons/vendor/kucrut/icon-picker/includes/types/buddyboss.php:142
 #: inc/plugins/buddyboss-menu-icons/vendor/kucrut/icon-picker/includes/types/genericon.php:422
 #: inc/plugins/elementor/widgets/bb-activity.php:42
-#: inc/plugins/elementor/widgets/bb-activity.php:583
+#: inc/plugins/elementor/widgets/bb-activity.php:256
 msgid "Activity"
 msgstr ""
 
@@ -3908,14 +3911,14 @@ msgid "Bookmark: Small"
 msgstr ""
 
 #: inc/plugins/buddyboss-menu-icons/vendor/kucrut/icon-picker/includes/types/buddyboss.php:407
-#: inc/plugins/elementor/widgets/bb-activity.php:243
+#: inc/plugins/elementor/widgets/bb-activity.php:284
 #: inc/plugins/elementor/widgets/bb-dashboard-grid.php:282
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:190
-#: inc/plugins/elementor/widgets/bb-forums.php:184
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:232
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:219
+#: inc/plugins/elementor/widgets/bb-forums.php:225
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:261
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:648
-#: inc/plugins/elementor/widgets/bb-members.php:241
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:239
+#: inc/plugins/elementor/widgets/bb-members.php:282
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:234
 msgid "Box"
 msgstr ""
 
@@ -4864,6 +4867,9 @@ msgid "Log In"
 msgstr ""
 
 #: inc/plugins/buddyboss-menu-icons/vendor/kucrut/icon-picker/includes/types/buddyboss.php:1437
+#: inc/theme/functions.php:1406 inc/theme/template-functions.php:1435
+#: template-parts/header-mobile.php:163
+#: template-parts/header-profile-menu.php:443
 msgid "Log Out"
 msgstr ""
 
@@ -4898,7 +4904,7 @@ msgstr ""
 
 #: inc/plugins/buddyboss-menu-icons/vendor/kucrut/icon-picker/includes/types/buddyboss.php:1472
 #: inc/plugins/buddyboss-menu-icons/vendor/kucrut/icon-picker/includes/types/genericon.php:162
-#: learndash/ld30/learndash-sidebar.php:69 template-parts/header-aside.php:53
+#: learndash/ld30/learndash-sidebar.php:69 template-parts/header-aside.php:78
 msgid "Maximize"
 msgstr ""
 
@@ -4943,7 +4949,7 @@ msgstr ""
 
 #: inc/plugins/buddyboss-menu-icons/vendor/kucrut/icon-picker/includes/types/buddyboss.php:1532
 #: inc/plugins/buddyboss-menu-icons/vendor/kucrut/icon-picker/includes/types/genericon.php:167
-#: learndash/ld30/learndash-sidebar.php:70 template-parts/header-aside.php:54
+#: learndash/ld30/learndash-sidebar.php:70 template-parts/header-aside.php:79
 msgid "Minimize"
 msgstr ""
 
@@ -5009,7 +5015,7 @@ msgstr ""
 
 #: inc/plugins/buddyboss-menu-icons/vendor/kucrut/icon-picker/includes/types/buddyboss.php:1592
 #: inc/plugins/elementor/widgets/bb-gallery.php:497
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:653
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:682
 #: inc/plugins/elementor/widgets/bb-tabs.php:702
 msgid "Navigation"
 msgstr ""
@@ -5070,7 +5076,7 @@ msgstr ""
 #: inc/plugins/buddyboss-menu-icons/vendor/kucrut/icon-picker/includes/types/fa.php:3037
 #: inc/plugins/buddyboss-menu-icons/vendor/kucrut/icon-picker/includes/types/fa.php:3047
 #: inc/plugins/buddyboss-menu-icons/vendor/kucrut/icon-picker/includes/types/genericon.php:542
-#: inc/plugins/woocommerce-helper.php:158
+#: inc/plugins/woocommerce-helper.php:155
 msgid "Phone"
 msgstr ""
 
@@ -7429,7 +7435,7 @@ msgstr ""
 
 #: inc/plugins/buddyboss-menu-icons/vendor/kucrut/icon-picker/includes/types/fa.php:1940
 #: inc/plugins/buddyboss-menu-icons/vendor/kucrut/icon-picker/includes/types/genericon.php:142
-#: learndash/ld30/lesson/listing.php:80
+#: learndash/ld30/lesson/listing.php:81
 #: learndash/ld30/lesson/partials/row.php:209
 #: learndash/ld30/shortcodes/profile/course-row.php:31
 msgid "Expand"
@@ -8149,23 +8155,23 @@ msgstr ""
 
 #: inc/plugins/buddyboss-menu-icons/vendor/kucrut/icon-picker/includes/types/foundation-icons.php:399
 #: inc/plugins/elementor/widgets/bb-dashboard-grid.php:630
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:501
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:543
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:693
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:735
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:530
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:572
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:722
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:764
 #: inc/plugins/elementor/widgets/bb-gallery.php:335
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:519
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:561
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:750
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:781
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:1059
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:1101
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:548
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:590
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:779
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:810
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:1088
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:1130
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:703
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:912
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:943
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:265
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:553
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:583
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:260
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:547
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:577
 #: inc/plugins/elementor/widgets/bb-review.php:706
 #: inc/plugins/elementor/widgets/bb-tabs.php:620
 #: inc/plugins/elementor/widgets/bb-tabs.php:651
@@ -8337,7 +8343,7 @@ msgstr ""
 
 #: inc/plugins/buddyboss-menu-icons/vendor/kucrut/icon-picker/includes/types/foundation-icons.php:914
 #: inc/plugins/buddyboss-menu-icons/vendor/kucrut/icon-picker/includes/types/genericon.php:182
-#: inc/plugins/learndash-helper.php:1652
+#: inc/plugins/learndash-helper.php:1653
 #: lifterlms/assignment/template-single-assignment-content.php:93
 #: lifterlms/lesson/template-single-lesson-content.php:144
 #: lifterlms/myaccount/my-notifications.php:41
@@ -8348,7 +8354,7 @@ msgstr ""
 
 #: inc/plugins/buddyboss-menu-icons/vendor/kucrut/icon-picker/includes/types/foundation-icons.php:929
 #: inc/plugins/buddyboss-menu-icons/vendor/kucrut/icon-picker/includes/types/genericon.php:187
-#: inc/plugins/learndash-helper.php:1651
+#: inc/plugins/learndash-helper.php:1652
 #: lifterlms/assignment/template-single-assignment-content.php:97
 #: lifterlms/lesson/template-single-lesson-content.php:154
 #: lifterlms/myaccount/my-notifications.php:42
@@ -8642,17 +8648,17 @@ msgstr ""
 msgid "Custom Field #2"
 msgstr ""
 
-#: inc/plugins/buddypress-helper.php:197
+#: inc/plugins/buddypress-helper.php:199
 msgid "member"
 msgid_plural "members"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/plugins/buddypress-helper.php:206
+#: inc/plugins/buddypress-helper.php:208
 msgid "more"
 msgstr ""
 
-#: inc/plugins/buddypress-helper.php:276
+#: inc/plugins/buddypress-helper.php:278
 msgid "%d result"
 msgid_plural "%d results"
 msgstr[0] ""
@@ -8752,40 +8758,66 @@ msgstr ""
 msgid "Show Delete Activity"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-activity.php:252
-#: inc/plugins/elementor/widgets/bb-activity.php:344
+#: inc/plugins/elementor/widgets/bb-activity.php:251
+#: inc/plugins/elementor/widgets/bb-forums.php:192
+#: inc/plugins/elementor/widgets/bb-members.php:249
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:173
+msgid "Heading Text"
+msgstr ""
+
+#: inc/plugins/elementor/widgets/bb-activity.php:257
+#: inc/plugins/elementor/widgets/bb-forums.php:198
+#: inc/plugins/elementor/widgets/bb-members.php:255
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:179
+msgid "Enter heading text"
+msgstr ""
+
+#: inc/plugins/elementor/widgets/bb-activity.php:265
+msgid "Activity Link Text"
+msgstr ""
+
+#: inc/plugins/elementor/widgets/bb-activity.php:270
+msgid "All Activity"
+msgstr ""
+
+#: inc/plugins/elementor/widgets/bb-activity.php:271
+msgid "Enter activity link text"
+msgstr ""
+
+#: inc/plugins/elementor/widgets/bb-activity.php:293
+#: inc/plugins/elementor/widgets/bb-activity.php:385
 #: inc/plugins/elementor/widgets/bb-dashboard-grid.php:291
 #: inc/plugins/elementor/widgets/bb-dashboard-grid.php:414
 #: inc/plugins/elementor/widgets/bb-dashboard-intro.php:193
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:199
-#: inc/plugins/elementor/widgets/bb-forums.php:193
-#: inc/plugins/elementor/widgets/bb-forums.php:289
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:228
+#: inc/plugins/elementor/widgets/bb-forums.php:234
+#: inc/plugins/elementor/widgets/bb-forums.php:330
 #: inc/plugins/elementor/widgets/bb-header-bar.php:1149
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:241
-#: inc/plugins/elementor/widgets/bb-members.php:250
-#: inc/plugins/elementor/widgets/bb-members.php:377
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:270
+#: inc/plugins/elementor/widgets/bb-members.php:291
+#: inc/plugins/elementor/widgets/bb-members.php:418
 #: inc/plugins/elementor/widgets/bb-review.php:664
 msgid "Border"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-activity.php:263
-#: inc/plugins/elementor/widgets/bb-activity.php:355
+#: inc/plugins/elementor/widgets/bb-activity.php:304
+#: inc/plugins/elementor/widgets/bb-activity.php:396
 #: inc/plugins/elementor/widgets/bb-dashboard-grid.php:302
 #: inc/plugins/elementor/widgets/bb-dashboard-grid.php:425
 #: inc/plugins/elementor/widgets/bb-dashboard-grid.php:682
 #: inc/plugins/elementor/widgets/bb-dashboard-intro.php:223
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:210
-#: inc/plugins/elementor/widgets/bb-forums.php:204
-#: inc/plugins/elementor/widgets/bb-forums.php:300
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:239
+#: inc/plugins/elementor/widgets/bb-forums.php:245
+#: inc/plugins/elementor/widgets/bb-forums.php:341
 #: inc/plugins/elementor/widgets/bb-gallery.php:606
 #: inc/plugins/elementor/widgets/bb-header-bar.php:798
 #: inc/plugins/elementor/widgets/bb-header-bar.php:1160
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:252
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:281
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:752
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:981
-#: inc/plugins/elementor/widgets/bb-members.php:261
-#: inc/plugins/elementor/widgets/bb-members.php:388
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:317
+#: inc/plugins/elementor/widgets/bb-members.php:302
+#: inc/plugins/elementor/widgets/bb-members.php:429
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:312
 #: inc/plugins/elementor/widgets/bb-review.php:675
 #: inc/plugins/elementor/widgets/bb-review.php:780
 #: inc/plugins/elementor/widgets/bb-tabs.php:460
@@ -8794,84 +8826,80 @@ msgstr ""
 msgid "Border Radius"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-activity.php:282
+#: inc/plugins/elementor/widgets/bb-activity.php:323
 #: inc/plugins/elementor/widgets/bb-dashboard-grid.php:321
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:229
-#: inc/plugins/elementor/widgets/bb-forums.php:223
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:258
+#: inc/plugins/elementor/widgets/bb-forums.php:264
 #: inc/plugins/elementor/widgets/bb-gallery.php:428
 #: inc/plugins/elementor/widgets/bb-gallery.php:536
 #: inc/plugins/elementor/widgets/bb-gallery.php:567
 #: inc/plugins/elementor/widgets/bb-gallery.php:644
 #: inc/plugins/elementor/widgets/bb-gallery.php:664
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:278
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:307
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:346
-#: inc/plugins/elementor/widgets/bb-members.php:280
+#: inc/plugins/elementor/widgets/bb-members.php:321
 #: inc/plugins/elementor/widgets/bb-tabs.php:370
 #: inc/plugins/elementor/widgets/bb-tabs.php:914
 msgid "Background"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-activity.php:291
+#: inc/plugins/elementor/widgets/bb-activity.php:332
 msgid "All Activity Link"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-activity.php:300
+#: inc/plugins/elementor/widgets/bb-activity.php:341
 msgid "All Activity Link Color"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-activity.php:313
+#: inc/plugins/elementor/widgets/bb-activity.php:354
 #: inc/plugins/elementor/widgets/bb-dashboard-intro.php:162
-#: inc/plugins/elementor/widgets/bb-forums.php:254
+#: inc/plugins/elementor/widgets/bb-forums.php:295
 #: inc/plugins/elementor/widgets/bb-header-bar.php:715
-#: inc/plugins/elementor/widgets/bb-members.php:347
+#: inc/plugins/elementor/widgets/bb-members.php:388
 #: inc/plugins/elementor/widgets/bb-review.php:533
 msgid "Avatar"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-activity.php:367
-#: inc/plugins/elementor/widgets/bb-forums.php:312
-#: inc/plugins/elementor/widgets/bb-members.php:400
+#: inc/plugins/elementor/widgets/bb-activity.php:408
+#: inc/plugins/elementor/widgets/bb-forums.php:353
+#: inc/plugins/elementor/widgets/bb-members.php:441
 msgid "Opacity (%)"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-activity.php:388
+#: inc/plugins/elementor/widgets/bb-activity.php:429
 #: inc/plugins/elementor/widgets/bb-dashboard-grid.php:443
 #: inc/plugins/elementor/widgets/bb-dashboard-intro.php:250
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:295
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:345
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:395
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:445
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:800
-#: inc/plugins/elementor/widgets/bb-forums.php:333
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:363
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:413
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:463
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:1166
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:324
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:374
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:424
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:474
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:829
+#: inc/plugins/elementor/widgets/bb-forums.php:374
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:392
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:442
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:492
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:1195
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:456
-#: inc/plugins/elementor/widgets/bb-members.php:421
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:335
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:633
+#: inc/plugins/elementor/widgets/bb-members.php:462
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:330
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:627
 msgid "Spacing"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-activity.php:418
+#: inc/plugins/elementor/widgets/bb-activity.php:459
 msgid "Typography Header"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-activity.php:427
-#: inc/plugins/elementor/widgets/bb-forums.php:422
+#: inc/plugins/elementor/widgets/bb-activity.php:468
+#: inc/plugins/elementor/widgets/bb-forums.php:463
 msgid "Typography Content"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-activity.php:435
+#: inc/plugins/elementor/widgets/bb-activity.php:476
 msgid "Content Color"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-activity.php:586
-msgid "All activity"
-msgstr ""
-
-#: inc/plugins/elementor/widgets/bb-activity.php:670
+#: inc/plugins/elementor/widgets/bb-activity.php:713
 msgid "Post an Update"
 msgstr ""
 
@@ -8896,7 +8924,7 @@ msgid "Description"
 msgstr ""
 
 #: inc/plugins/elementor/widgets/bb-dashboard-grid.php:143
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:948
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:977
 msgid "Show Tooltip"
 msgstr ""
 
@@ -8939,14 +8967,14 @@ msgstr ""
 
 #: inc/plugins/elementor/widgets/bb-dashboard-grid.php:242
 #: inc/plugins/elementor/widgets/bb-dashboard-intro.php:101
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:583
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:651
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:612
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:680
 #: inc/plugins/elementor/widgets/bb-gallery.php:364
 #: inc/plugins/elementor/widgets/bb-header-bar.php:352
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:601
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:880
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:923
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:1017
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:630
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:909
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:952
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:1046
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:797
 #: inc/plugins/elementor/widgets/bb-members.php:166
 #: inc/plugins/elementor/widgets/bb-profile-completion.php:103
@@ -8965,14 +8993,14 @@ msgstr ""
 
 #: inc/plugins/elementor/widgets/bb-dashboard-grid.php:250
 #: inc/plugins/elementor/widgets/bb-dashboard-intro.php:109
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:591
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:659
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:620
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:688
 #: inc/plugins/elementor/widgets/bb-gallery.php:372
 #: inc/plugins/elementor/widgets/bb-header-bar.php:360
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:609
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:888
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:927
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:1025
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:638
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:917
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:956
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:1054
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:805
 #: inc/plugins/elementor/widgets/bb-members.php:170
 #: inc/plugins/elementor/widgets/bb-profile-completion.php:111
@@ -9007,7 +9035,7 @@ msgid "Image Ratio"
 msgstr ""
 
 #: inc/plugins/elementor/widgets/bb-dashboard-grid.php:475
-#: inc/plugins/elementor/widgets/bb-forums.php:363
+#: inc/plugins/elementor/widgets/bb-forums.php:404
 #: inc/plugins/elementor/widgets/bb-review.php:814
 msgid "Typography Title"
 msgstr ""
@@ -9019,21 +9047,21 @@ msgid "Title Color"
 msgstr ""
 
 #: inc/plugins/elementor/widgets/bb-dashboard-grid.php:508
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:525
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:717
-#: inc/plugins/elementor/widgets/bb-forums.php:397
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:554
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:746
+#: inc/plugins/elementor/widgets/bb-forums.php:438
 #: inc/plugins/elementor/widgets/bb-gallery.php:549
 #: inc/plugins/elementor/widgets/bb-header-bar.php:691
 #: inc/plugins/elementor/widgets/bb-header-bar.php:864
 #: inc/plugins/elementor/widgets/bb-header-bar.php:951
 #: inc/plugins/elementor/widgets/bb-header-bar.php:1040
 #: inc/plugins/elementor/widgets/bb-header-bar.php:1115
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:543
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:763
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:1083
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:572
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:792
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:1112
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:925
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:1038
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:571
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:565
 #: inc/plugins/elementor/widgets/bb-tabs.php:633
 #: inc/plugins/elementor/widgets/bb-tabs.php:1253
 msgid "Hover"
@@ -9045,27 +9073,27 @@ msgstr ""
 
 #: inc/plugins/elementor/widgets/bb-dashboard-grid.php:559
 #: inc/plugins/elementor/widgets/bb-dashboard-grid.php:608
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:275
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:325
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:375
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:425
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:490
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:532
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:682
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:724
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:304
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:354
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:404
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:454
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:519
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:561
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:711
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:753
 #: inc/plugins/elementor/widgets/bb-gallery.php:455
 #: inc/plugins/elementor/widgets/bb-gallery.php:484
 #: inc/plugins/elementor/widgets/bb-gallery.php:525
 #: inc/plugins/elementor/widgets/bb-gallery.php:556
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:343
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:393
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:443
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:508
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:550
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:739
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:770
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:1048
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:1090
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:372
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:422
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:472
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:537
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:579
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:768
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:799
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:1077
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:1119
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:374
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:436
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:524
@@ -9075,10 +9103,10 @@ msgstr ""
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:932
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:1024
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:1045
-#: inc/plugins/elementor/widgets/bb-members.php:450
-#: inc/plugins/elementor/widgets/bb-members.php:522
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:545
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:575
+#: inc/plugins/elementor/widgets/bb-members.php:491
+#: inc/plugins/elementor/widgets/bb-members.php:563
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:539
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:569
 #: inc/plugins/elementor/widgets/bb-tabs.php:438
 #: inc/plugins/elementor/widgets/bb-tabs.php:540
 #: inc/plugins/elementor/widgets/bb-tabs.php:569
@@ -9107,20 +9135,20 @@ msgid "Icon Link"
 msgstr ""
 
 #: inc/plugins/elementor/widgets/bb-dashboard-grid.php:619
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:512
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:554
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:704
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:746
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:541
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:583
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:733
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:775
 #: inc/plugins/elementor/widgets/bb-header-bar.php:786
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:530
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:572
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:968
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:1070
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:1112
-#: inc/plugins/elementor/widgets/bb-members.php:334
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:308
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:561
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:591
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:559
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:601
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:997
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:1099
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:1141
+#: inc/plugins/elementor/widgets/bb-members.php:375
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:303
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:555
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:585
 #: inc/plugins/elementor/widgets/bb-tabs.php:1229
 #: inc/plugins/elementor/widgets/bb-tabs.php:1271
 msgid "Border Color"
@@ -9167,7 +9195,7 @@ msgid "Enter your introductory text"
 msgstr ""
 
 #: inc/plugins/elementor/widgets/bb-dashboard-intro.php:242
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:797
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:826
 msgid "Shadow"
 msgstr ""
 
@@ -9225,13 +9253,13 @@ msgstr ""
 #: inc/plugins/elementor/widgets/bb-forums-activity.php:177
 #: inc/plugins/elementor/widgets/bb-ld-activity.php:192
 #: inc/plugins/elementor/widgets/bb-ld-activity.php:219
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:210
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:227
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:207
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:223
 msgid "Enter button text"
 msgstr ""
 
 #: inc/plugins/elementor/widgets/bb-forums-activity.php:161
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:635
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:664
 msgid "My Discussions Button"
 msgstr ""
 
@@ -9239,18 +9267,42 @@ msgstr ""
 msgid "View My Discussions"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:316
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:188
+msgid "No Forums Paragraph Text"
+msgstr ""
+
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:193
+msgid "You don't have any discussions yet."
+msgstr ""
+
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:194
+msgid "Enter no forums paragraph text"
+msgstr ""
+
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:203
+msgid "No Forums Button Text"
+msgstr ""
+
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:208
+msgid "Explore Forums"
+msgstr ""
+
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:209
+msgid "Enter no forums button text"
+msgstr ""
+
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:345
 msgid "Topic Title"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:366
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:395
 msgid "Meta Data"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:416
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:445
 #: inc/plugins/elementor/widgets/bb-gallery.php:125
 #: inc/plugins/elementor/widgets/bb-gallery.php:466
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:434
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:463
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:550
 #: inc/plugins/elementor/widgets/bb-tabs.php:138
 #: inc/plugins/elementor/widgets/bb-tabs.php:551
@@ -9258,29 +9310,29 @@ msgstr ""
 msgid "Excerpt"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:468
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:486
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:530
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:497
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:515
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:525
 #: inc/plugins/elementor/widgets/bb-tabs.php:580
 #: inc/plugins/elementor/widgets/bb-tabs.php:1189
 msgid "Button"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:578
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:646
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:596
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:1012
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:607
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:675
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:625
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:1041
 msgid "Button Alignment"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:587
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:655
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:616
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:684
 #: inc/plugins/elementor/widgets/bb-gallery.php:368
 #: inc/plugins/elementor/widgets/bb-gallery.php:393
 #: inc/plugins/elementor/widgets/bb-header-bar.php:356
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:605
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:884
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:1021
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:634
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:913
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:1050
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:801
 #: inc/plugins/elementor/widgets/bb-profile-completion.php:107
 #: inc/plugins/elementor/widgets/bb-tabs.php:413
@@ -9289,33 +9341,24 @@ msgstr ""
 msgid "Center"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:603
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:770
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:621
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:1136
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:609
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:632
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:799
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:650
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:1165
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:603
 msgid "Button Padding"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:622
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:789
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:640
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:1155
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:625
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:651
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:818
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:669
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:1184
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:619
 msgid "Button Border"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:942
-msgid "You don't have any discussions yet."
-msgstr ""
-
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:943
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:953
-msgid "Explore Forums"
-msgstr ""
-
-#: inc/plugins/elementor/widgets/bb-forums-activity.php:952
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:1328
+#: inc/plugins/elementor/widgets/bb-forums-activity.php:983
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:1356
 msgid "You are not logged in."
 msgstr ""
 
@@ -9335,42 +9378,50 @@ msgstr ""
 msgid "Show Last Reply"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-forums.php:232
+#: inc/plugins/elementor/widgets/bb-forums.php:206
+msgid "Forum Link Text"
+msgstr ""
+
+#: inc/plugins/elementor/widgets/bb-forums.php:211
+msgid "All Forums"
+msgstr ""
+
+#: inc/plugins/elementor/widgets/bb-forums.php:212
+msgid "Enter forum link text"
+msgstr ""
+
+#: inc/plugins/elementor/widgets/bb-forums.php:273
 msgid "All Forums Link"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-forums.php:241
+#: inc/plugins/elementor/widgets/bb-forums.php:282
 msgid "All Forums Link Color"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-forums.php:382
-#: inc/plugins/elementor/widgets/bb-forums.php:404
+#: inc/plugins/elementor/widgets/bb-forums.php:423
+#: inc/plugins/elementor/widgets/bb-forums.php:445
 msgid "Title/Links Color"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-forums.php:430
+#: inc/plugins/elementor/widgets/bb-forums.php:471
 msgid "Meta Data Color"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-forums.php:442
+#: inc/plugins/elementor/widgets/bb-forums.php:483
 msgid "Last Reply Color"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-forums.php:481
-msgid "All forums"
-msgstr ""
-
-#: inc/plugins/elementor/widgets/bb-forums.php:533
-#: inc/plugins/elementor/widgets/bb-forums.php:536
+#: inc/plugins/elementor/widgets/bb-forums.php:576
+#: inc/plugins/elementor/widgets/bb-forums.php:579
 msgid " Replies"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-forums.php:533
-#: inc/plugins/elementor/widgets/bb-forums.php:536
+#: inc/plugins/elementor/widgets/bb-forums.php:576
+#: inc/plugins/elementor/widgets/bb-forums.php:579
 msgid " Reply"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-forums.php:594
+#: inc/plugins/elementor/widgets/bb-forums.php:637
 msgid "Start a Discussion"
 msgstr ""
 
@@ -9489,7 +9540,7 @@ msgid "Content Padding"
 msgstr ""
 
 #: inc/plugins/elementor/widgets/bb-gallery.php:624
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:805
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:834
 msgid "Dots"
 msgstr ""
 
@@ -9500,7 +9551,7 @@ msgid "Active"
 msgstr ""
 
 #: inc/plugins/elementor/widgets/bb-header-bar.php:211
-#: learndash/ld30/learndash-sidebar.php:66 template-parts/header-aside.php:50
+#: learndash/ld30/learndash-sidebar.php:66 template-parts/header-aside.php:75
 #: template-parts/header-mobile.php:50
 msgid "Dark Mode"
 msgstr ""
@@ -9587,7 +9638,7 @@ msgid "Typography Display Name"
 msgstr ""
 
 #: inc/plugins/elementor/widgets/bb-header-bar.php:724
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:247
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:242
 msgid "Width"
 msgstr ""
 
@@ -9596,7 +9647,7 @@ msgid "Border Style"
 msgstr ""
 
 #: inc/plugins/elementor/widgets/bb-header-bar.php:763
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:288
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:283
 msgid "Border Width"
 msgstr ""
 
@@ -9657,7 +9708,7 @@ msgid "Continue"
 msgstr ""
 
 #: inc/plugins/elementor/widgets/bb-ld-activity.php:203
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:1001
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:1030
 msgid "My Courses Button"
 msgstr ""
 
@@ -9665,71 +9716,87 @@ msgstr ""
 msgid "View My Courses"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:315
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:230
+msgid "No Courses Paragraph Text"
+msgstr ""
+
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:235
+msgid "You don't have any ongoing courses."
+msgstr ""
+
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:236
+msgid "Enter no courses paragraph text"
+msgstr ""
+
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:245
+msgid "No Courses Button Text"
+msgstr ""
+
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:250
+msgid "Explore Courses"
+msgstr ""
+
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:251
+msgid "Enter no courses button text"
+msgstr ""
+
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:344
 msgid "Media Overlay"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:325
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:354
 msgid "Overlay"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:334
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:363
 msgid "Course Title"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:661
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:690
 msgid "Course Overlap"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:662
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:691
 msgid "Show courses/lessons overlapped."
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:818
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:957
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:847
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:986
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:360
 msgid "Active Color"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:833
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:862
 msgid "Inactive Color"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:906
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:935
 msgid "Progress Bar"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:939
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:968
 msgid "Show Progress Value"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:979
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:1008
 msgid "Progress Value Color"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:991
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:385
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:523
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:1020
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:380
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:518
 msgid "Typography Progress Value"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:1282
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:1309
 #: learndash/ld30/learndash-sidebar.php:150
 msgid "% Completed"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:1288
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:722
+#: inc/plugins/elementor/widgets/bb-ld-activity.php:1315
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:716
 #: inc/plugins/elementor/widgets/bb-profile-completion.php:730
 msgid "%"
-msgstr ""
-
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:1326
-msgid "You don't have any ongoing courses."
-msgstr ""
-
-#: inc/plugins/elementor/widgets/bb-ld-activity.php:1330
-msgid "Explore Courses"
 msgstr ""
 
 #: inc/plugins/elementor/widgets/bb-ld-courses.php:42
@@ -9897,37 +9964,46 @@ msgstr ""
 msgid "Tooltips will be shown on member avatar."
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-members.php:289
+#: inc/plugins/elementor/widgets/bb-members.php:263
+msgid "Member Link Text"
+msgstr ""
+
+#: inc/plugins/elementor/widgets/bb-members.php:268
+#: lifterlms/profile/members.php:53
+msgid "All Members"
+msgstr ""
+
+#: inc/plugins/elementor/widgets/bb-members.php:269
+msgid "Enter member link text"
+msgstr ""
+
+#: inc/plugins/elementor/widgets/bb-members.php:330
 msgid "All Members Link"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-members.php:298
+#: inc/plugins/elementor/widgets/bb-members.php:339
 msgid "All Members Link Color"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-members.php:309
+#: inc/plugins/elementor/widgets/bb-members.php:350
 msgid "Filter Types"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-members.php:318
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:275
+#: inc/plugins/elementor/widgets/bb-members.php:359
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:270
 msgid "Border Type"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-members.php:441
+#: inc/plugins/elementor/widgets/bb-members.php:482
 msgid "Online Status"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-members.php:486
+#: inc/plugins/elementor/widgets/bb-members.php:527
 msgid "Online Status Border"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-members.php:497
+#: inc/plugins/elementor/widgets/bb-members.php:538
 msgid "Online Status Border Radius"
-msgstr ""
-
-#: inc/plugins/elementor/widgets/bb-members.php:572
-msgid "All members"
 msgstr ""
 
 #: inc/plugins/elementor/widgets/bb-profile-completion.php:38
@@ -9961,23 +10037,15 @@ msgstr ""
 msgid "Profile Complete Button"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:176
-msgid "Heading Text"
-msgstr ""
-
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:181
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:178
 msgid "Complete your profile"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:182
-msgid "Enter heading text"
-msgstr ""
-
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:191
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:188
 msgid "Completion Text"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:196
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:193
 #: inc/plugins/lifterlms-helper.php:1411
 #: lifterlms/assignment/template-single-assignment-content.php:72
 #: lifterlms/lesson/template-single-lesson-content.php:121
@@ -9985,98 +10053,98 @@ msgstr ""
 msgid "Complete"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:197
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:194
 msgid "Enter completion text"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:203
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:200
 msgid "Complete Profile Button Text"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:204
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:201
 msgid "Button text if progress is less than 100%"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:209
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:206
 msgid "Complete Profile"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:220
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:216
 msgid "Edit Profile Button Text"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:221
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:217
 msgid "Button text once progress hits 100%"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:330
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:325
 msgid "Progress Graph"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:351
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:346
 msgid "Progress Graph Border Width"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:376
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:371
 msgid "Typography Heading"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:394
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:389
 msgid "Typography Progress Info"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:403
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:398
 msgid "Typography Progress Data"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:411
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:431
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:406
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:426
 msgid "Details Completion Background Color"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:426
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:421
 msgid "Colors"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:443
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:438
 msgid "Heading Color"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:455
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:450
 msgid "Completion Color"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:467
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:462
 msgid "Incomplete Color"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:477
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:472
 msgid "Progress Border Color"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:490
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:485
 msgid "Details Dropdown"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:495
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:490
 msgid "Show Header"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:504
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:499
 msgid "Show Completion Icon"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:510
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:505
 msgid "Show Completion Status"
 msgstr ""
 
-#: inc/plugins/elementor/widgets/bb-profile-completion.php:517
+#: inc/plugins/elementor/widgets/bb-profile-completion.php:512
 msgid "Details Container Shadow"
 msgstr ""
 
 #: inc/plugins/elementor/widgets/bb-review.php:42
-#: inc/plugins/woocommerce-helper.php:185
-#: inc/plugins/woocommerce-helper.php:187
+#: inc/plugins/woocommerce-helper.php:182
+#: inc/plugins/woocommerce-helper.php:184
 msgid "Reviews"
 msgstr ""
 
@@ -10473,44 +10541,44 @@ msgstr ""
 msgid "Leave Review"
 msgstr ""
 
-#: inc/plugins/woocommerce-helper.php:153
-#: inc/plugins/woocommerce-helper.php:162
+#: inc/plugins/woocommerce-helper.php:150
+#: inc/plugins/woocommerce-helper.php:159
 #: woocommerce/myaccount/form-edit-account.php:32
 #: woocommerce/myaccount/form-edit-account.php:33
 msgid "First name"
 msgstr ""
 
-#: inc/plugins/woocommerce-helper.php:154
-#: inc/plugins/woocommerce-helper.php:163
+#: inc/plugins/woocommerce-helper.php:151
+#: inc/plugins/woocommerce-helper.php:160
 #: woocommerce/myaccount/form-edit-account.php:37
 #: woocommerce/myaccount/form-edit-account.php:38
 msgid "Last name"
 msgstr ""
 
-#: inc/plugins/woocommerce-helper.php:155
-#: inc/plugins/woocommerce-helper.php:164
+#: inc/plugins/woocommerce-helper.php:152
+#: inc/plugins/woocommerce-helper.php:161
 msgid "Company name"
 msgstr ""
 
-#: inc/plugins/woocommerce-helper.php:156
-#: inc/plugins/woocommerce-helper.php:165
+#: inc/plugins/woocommerce-helper.php:153
+#: inc/plugins/woocommerce-helper.php:162
 msgid "Town / City"
 msgstr ""
 
-#: inc/plugins/woocommerce-helper.php:157
-#: inc/plugins/woocommerce-helper.php:167
+#: inc/plugins/woocommerce-helper.php:154
+#: inc/plugins/woocommerce-helper.php:164
 msgid "Postcode / ZIP"
 msgstr ""
 
-#: inc/plugins/woocommerce-helper.php:159
+#: inc/plugins/woocommerce-helper.php:156
 #: woocommerce/myaccount/form-edit-account.php:52
 #: woocommerce/myaccount/form-edit-account.php:53
 #: woocommerce/myaccount/form-login.php:99
 msgid "Email address"
 msgstr ""
 
-#: inc/plugins/woocommerce-helper.php:160
-#: inc/plugins/woocommerce-helper.php:166
+#: inc/plugins/woocommerce-helper.php:157
+#: inc/plugins/woocommerce-helper.php:163
 msgid "State / County"
 msgstr ""
 
@@ -10526,35 +10594,35 @@ msgstr ""
 msgid "Titlebar"
 msgstr ""
 
-#: inc/theme/functions.php:392
+#: inc/theme/functions.php:395
 msgid "Share on Facebook"
 msgstr ""
 
-#: inc/theme/functions.php:393
+#: inc/theme/functions.php:396
 msgid "Tweet"
 msgstr ""
 
-#: inc/theme/functions.php:395
+#: inc/theme/functions.php:398
 msgid "Your comment has been posted."
 msgstr ""
 
-#: inc/theme/functions.php:396
+#: inc/theme/functions.php:399
 msgid "Please Wait..."
 msgstr ""
 
-#: inc/theme/functions.php:425
+#: inc/theme/functions.php:428
 msgid "Choose or Upload an Image"
 msgstr ""
 
-#: inc/theme/functions.php:426
+#: inc/theme/functions.php:429
 msgid "Use this image"
 msgstr ""
 
-#: inc/theme/functions.php:1090
+#: inc/theme/functions.php:1271
 msgid "Start typing to search..."
 msgstr ""
 
-#: inc/theme/functions.php:1136
+#: inc/theme/functions.php:1317
 msgid "Stick to Bottom"
 msgstr ""
 
@@ -10617,7 +10685,7 @@ msgid "Create an Account"
 msgstr ""
 
 #: inc/theme/login.php:327 inc/theme/login.php:333
-#: template-parts/content-buddypress.php:20 template-parts/header-aside.php:91
+#: template-parts/content-buddypress.php:20 template-parts/header-aside.php:116
 #: template-parts/header-mobile.php:158
 msgid "Sign in"
 msgstr ""
@@ -10640,16 +10708,16 @@ msgstr ""
 msgid "Set as %3$s"
 msgstr ""
 
-#: inc/theme/multi-post-thumbnails.php:406
-#: inc/theme/multi-post-thumbnails.php:407
+#: inc/theme/multi-post-thumbnails.php:427
+#: inc/theme/multi-post-thumbnails.php:434
 msgid "Set %s"
 msgstr ""
 
-#: inc/theme/multi-post-thumbnails.php:420
+#: inc/theme/multi-post-thumbnails.php:448
 msgid "Replace image"
 msgstr ""
 
-#: inc/theme/multi-post-thumbnails.php:422
+#: inc/theme/multi-post-thumbnails.php:450
 msgid "Remove %s"
 msgstr ""
 
@@ -10842,11 +10910,6 @@ msgstr ""
 
 #: inc/theme/template-functions.php:1364
 msgid "<b>%s</b> following"
-msgstr ""
-
-#: inc/theme/template-functions.php:1435 template-parts/header-mobile.php:163
-#: template-parts/header-profile-menu.php:443
-msgid "Logout"
 msgstr ""
 
 #: inc/theme/template-functions.php:1592 inc/theme/template-functions.php:1618
@@ -11292,7 +11355,7 @@ msgstr ""
 msgid "Collapse All"
 msgstr ""
 
-#: learndash/ld30/learndash-sidebar.php:67 template-parts/header-aside.php:51
+#: learndash/ld30/learndash-sidebar.php:67 template-parts/header-aside.php:76
 #: template-parts/header-mobile.php:51
 msgid "Light Mode"
 msgstr ""
@@ -11798,10 +11861,6 @@ msgstr ""
 msgid "Manage"
 msgstr ""
 
-#: lifterlms/profile/members.php:53
-msgid "All Members"
-msgstr ""
-
 #: lifterlms/profile/members.php:64
 msgid "View all &rarr;"
 msgstr ""
@@ -12025,7 +12084,7 @@ msgstr ""
 msgid "Tagged: "
 msgstr ""
 
-#: template-parts/header-aside.php:94 template-parts/header-mobile.php:160
+#: template-parts/header-aside.php:119 template-parts/header-mobile.php:160
 msgid "Sign up"
 msgstr ""
 
@@ -12722,7 +12781,7 @@ msgstr ""
 
 #: memberpress/account/nav.php:24
 msgctxt "ui"
-msgid "Logout"
+msgid "Log Out"
 msgstr ""
 
 #: memberpress/account/nav.php:33
@@ -12981,18 +13040,18 @@ msgctxt "link: Back to Course"
 msgid "Back to %s"
 msgstr ""
 
-#: learndash/ld30/lesson/listing.php:52
+#: learndash/ld30/lesson/listing.php:53
 #. translators: Course Status Label.
 msgctxt "Lesson Content Label"
 msgid "%s Content"
 msgstr ""
 
-#: learndash/ld30/lesson/listing.php:65
+#: learndash/ld30/lesson/listing.php:66
 msgctxt "Lesson Complete Percentage"
 msgid "%s%% Complete"
 msgstr ""
 
-#: learndash/ld30/lesson/listing.php:66
+#: learndash/ld30/lesson/listing.php:67
 msgctxt "Lesson Steps Complete"
 msgid "%1$d/%2$d Steps"
 msgstr ""

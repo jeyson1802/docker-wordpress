@@ -236,6 +236,47 @@ class BBP_Members extends Widget_Base {
 		$this->end_controls_section();
 
 		$this->start_controls_section(
+			'section_content',
+			[
+				'label' => __( 'Content', 'buddyboss-theme' ),
+				'tab' => Controls_Manager::TAB_CONTENT,
+			]
+		);
+
+		$this->add_control(
+			'heading_text',
+			[
+				'label' => __( 'Heading Text', 'buddyboss-theme' ),
+				'type' => Controls_Manager::TEXT,
+				'dynamic' => [
+					'active' => true,
+				],
+				'default' => __( 'Members', 'buddyboss-theme' ),
+				'placeholder' => __( 'Enter heading text', 'buddyboss-theme' ),
+				'label_block' => true
+			]
+		);
+
+		$this->add_control(
+			'member_link_text',
+			[
+				'label' => __( 'Member Link Text', 'buddyboss-theme' ),
+				'type' => Controls_Manager::TEXT,
+				'dynamic' => [
+					'active' => true,
+				],
+				'default' => __( 'All Members', 'buddyboss-theme' ),
+				'placeholder' => __( 'Enter member link text', 'buddyboss-theme' ),
+				'label_block' => true,
+				'condition' => [
+					'switch_more' => 'yes',
+				]
+			]
+		);
+
+		$this->end_controls_section();
+
+		$this->start_controls_section(
 			'section_style_box',
 			[
 				'label'     => esc_html__( 'Box', 'buddyboss-theme' ),
@@ -566,10 +607,12 @@ class BBP_Members extends Widget_Base {
 		<div class="bb-members">
 
 			<div class="bb-block-header flex align-items-center">
-				<div class="bb-block-header__title"><h3><?php _e( 'Members', 'buddyboss-theme' ); ?></h3></div>
+				<div class="bb-block-header__title"><h3><?php echo esc_html( $settings['heading_text'] ); ?></h3></div>
 				<?php if ($settings['switch_more']) : ?>
 					<div class="bb-block-header__extra push-right">
-						<a href="<?php bp_members_directory_permalink(); ?>" class="count-more"><?php _e( 'All members', 'buddyboss-theme' ); ?><i class="bb-icon-chevron-right"></i></a>
+						<?php if( '' != $settings['member_link_text'] ) { ?>
+							<a href="<?php bp_members_directory_permalink(); ?>" class="count-more"><?php echo esc_html( $settings['member_link_text'] ); ?><i class="bb-icon-chevron-right"></i></a>
+						<?php } ?>
 					</div>
 				<?php endif; ?>	
 			</div>

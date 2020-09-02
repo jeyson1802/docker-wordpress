@@ -182,6 +182,35 @@ class BBP_Forums_Activity extends Widget_Base {
 			]
 		);
 
+		$this->add_control(
+			'no_forums_paragraph_text',
+			[
+				'label' => __( 'No Forums Paragraph Text', 'buddyboss-theme' ),
+				'type' => Controls_Manager::TEXT,
+				'dynamic' => [
+					'active' => true,
+				],
+				'default' => __( 'You don\'t have any discussions yet.', 'buddyboss-theme' ),
+				'placeholder' => __( 'Enter no forums paragraph text', 'buddyboss-theme' ),
+				'label_block' => true,
+				'separator' => 'before'
+			]
+		);
+
+		$this->add_control(
+			'no_forums_button_text',
+			[
+				'label' => __( 'No Forums Button Text', 'buddyboss-theme' ),
+				'type' => Controls_Manager::TEXT,
+				'dynamic' => [
+					'active' => true,
+				],
+				'default' => __( 'Explore Forums', 'buddyboss-theme' ),
+				'placeholder' => __( 'Enter no forums button text', 'buddyboss-theme' ),
+				'label_block' => true
+			]
+		);
+
 		$this->end_controls_section();
 
 		$this->start_controls_section(
@@ -939,8 +968,10 @@ class BBP_Forums_Activity extends Widget_Base {
 				
 					<div class="bb-no-data bb-no-data--fa-activity">
 						<img class="bb-no-data__image" src="<?php echo get_template_directory_uri(); ?>/assets/images/svg/dfy-no-data-icon03.svg" alt="Forums Activity" />
-						<div class="bb-no-data__msg"><?php _e( 'You don\'t have any discussions yet.', 'buddyboss-theme' ); ?></div>
-						<a href="<?php echo home_url(bbp_get_root_slug()); ?>" class="bb-no-data__link"><?php _e( 'Explore Forums', 'buddyboss-theme' ); ?></a>
+						<div class="bb-no-data__msg"><?php echo esc_html( $settings['no_forums_paragraph_text'] ); ?></div>
+						<?php if( '' !== $settings['no_forums_button_text']) { ?>
+							<a href="<?php echo home_url(bbp_get_root_slug()); ?>" class="bb-no-data__link"><?php echo esc_html( $settings['no_forums_button_text'] ); ?></a>
+						<?php } ?>
 					</div>
 
 				<?php }
@@ -950,7 +981,9 @@ class BBP_Forums_Activity extends Widget_Base {
 				<div class="bb-no-data bb-no-data--fa-activity">
 					<img class="bb-no-data__image" src="<?php echo get_template_directory_uri(); ?>/assets/images/svg/dfy-no-data-icon03.svg" alt="Forums Activity" />
 					<div class="bb-no-data__msg"><?php _e( 'You are not logged in.', 'buddyboss-theme' ); ?></div>
-					<a href="<?php echo home_url(bbp_get_root_slug()); ?>" class="bb-no-data__link"><?php _e( 'Explore Forums', 'buddyboss-theme' ); ?></a>
+					<?php if( '' !== $settings['no_forums_button_text']) { ?>
+						<a href="<?php echo home_url(bbp_get_root_slug()); ?>" class="bb-no-data__link"><?php echo $settings['no_forums_button_text']; ?></a>
+					<?php } ?>
 				</div>
 
 			<?php } ?>

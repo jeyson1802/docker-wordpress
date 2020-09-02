@@ -3,11 +3,9 @@
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-}
-#buddypress .component-navigation.bp-docs-nav li.last {
-  margin-left: auto;
-}
+      flex-flow: row wrap; }
+  #buddypress .component-navigation.bp-docs-nav li.last {
+    margin-left: auto; }
 
 #buddypress #bp-create-doc-button {
   padding: 10px 15px;
@@ -16,68 +14,55 @@
   margin: 0;
   line-height: 1;
   font-weight: 600;
-  font-size: 13px;
-}
+  font-size: 13px; }
 
 .entry-content .doc-content {
   border: 0;
-  padding: 0;
-}
+  padding: 0; }
+
 .entry-content form.standard-form input[type=text]#doc-title {
-  width: 100%;
-}
+  width: 100%; }
 
 .doc-content-wrapper > div {
-  margin-bottom: 20px;
-}
+  margin-bottom: 20px; }
 
 .add-files-button {
-  margin-top: 15px;
-}
+  margin-top: 15px; }
 
 .entry-content.entry-content p.toggle-switch,
 .entry-content .toggle-switch {
   background: #fff;
   border: 1px solid #DEDFE2;
-  padding: 8px 4px;
-}
+  padding: 8px 4px; }
 
 .entry-content .toggle-content {
   border: 1px solid #DEDFE2;
-  border-top: 0;
-}
+  border-top: 0; }
 
 button#mceu_0-open {
-  min-width: 96px;
-}
+  min-width: 96px; }
 
 .doc-content td,
 .doc-content td.desc-column,
 .doc-content td.content-column {
-  padding: 20px;
-}
+  padding: 20px; }
 
 .doc-content td:last-child {
-  padding-right: 20px;
-}
+  padding-right: 20px; }
 
 #buddypress .doc-content .standard-form .html-active .button {
-  background: transparent;
-}
+  background: transparent; }
 
 #doc-submit-options input[type=submit] {
-  margin-right: 15px;
-}
+  margin-right: 15px; }
 
 .edited-date-cell.edited-date-cell {
-  width: 170px;
-}
+  width: 170px; }
 
 .bp-docs .desc a,
 .bp-docs .asc a {
   background: transparent;
-  padding: 0;
-}
+  padding: 0; }
 
 .bp-docs .desc a:before,
 .bp-docs .asc a:before {
@@ -86,13 +71,10 @@ button#mceu_0-open {
   speak: none;
   display: inline-block;
   text-decoration: inherit;
-  text-transform: none;
-}
+  text-transform: none; }
 
 .bp-docs .asc a:before {
-  content: '\e864';
-}
+  content: '\e864'; }
 
 .doc-excerpt {
-  word-break: break-word;
-}
+  word-break: break-word; }

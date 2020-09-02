@@ -67,6 +67,12 @@ $course_pricing = learndash_get_course_price( $course_id );
          */
         do_action( 'learndash-course-infobar-access-progress-after', get_post_type(), $course_id, $user_id );
 
+        $course_status = learndash_course_status( $course_id, $user_id, true );
+
+        if ( 'in-progress' === $course_status ) {
+	        $course_status = 'progress';
+        }
+
         learndash_status_bubble( $course_status );
 
         /**

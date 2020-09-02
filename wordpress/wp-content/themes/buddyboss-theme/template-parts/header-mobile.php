@@ -160,7 +160,7 @@ $logo_class = ( $logo_align <= 1 && ( !buddyboss_is_learndash_inner() && !buddyb
 					<a href="<?php echo wp_registration_url(); ?>" class="button small full sing-up"><?php _e( 'Sign up', 'buddyboss-theme' ); ?></a>
 				<?php } ?>
 			<?php } else { ?>
-				<a href="<?php echo wp_logout_url(); ?>" class="button small full sign-out"><?php _e( 'Logout', 'buddyboss-theme' ); ?></a>
+				<a href="<?php echo wp_logout_url(); ?>" class="button small full sign-out"><?php _e( 'Log Out', 'buddyboss-theme' ); ?></a>
 			<?php } ?>
 		</div>
 

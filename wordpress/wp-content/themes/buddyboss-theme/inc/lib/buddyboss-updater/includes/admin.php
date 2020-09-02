@@ -369,6 +369,9 @@ if ( ! class_exists( 'BuddyBoss_Updater_Admin' ) ):
 					$response['product_keys'] = $package_product_keys;
 
 					$saved_licenses                   = $this->_get_saved_licenses();
+					if ( empty( $saved_licenses ) ) {
+						$saved_licenses = array();
+					}
 					$saved_licenses[ $package['id'] ] = $response;
 
 					$this->_update_saved_licenses( $saved_licenses );
@@ -480,6 +483,10 @@ if ( ! class_exists( 'BuddyBoss_Updater_Admin' ) ):
                 } else {
 				    $this->_saved_licenses = get_option( 'bboss_updater_saved_licenses' );
                 }
+			}
+
+			if ( empty( $this->_saved_licenses ) || ! is_array( $this->_saved_licenses ) ) {
+				$this->_saved_licenses = array();
 			}
 
 			return $this->_saved_licenses;

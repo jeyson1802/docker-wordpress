@@ -11,7 +11,7 @@
 
 bp_nouveau_activity_hook( 'before', 'entry' ); ?>
 
-<li class="<?php bp_activity_css_class(); ?>" id="activity-<?php bp_activity_id(); ?>" data-bp-activity-id="<?php bp_activity_id(); ?>" data-bp-timestamp="<?php bp_nouveau_activity_timestamp(); ?>">
+<li class="<?php bp_activity_css_class(); ?>" id="activity-<?php bp_activity_id(); ?>" data-bp-activity-id="<?php bp_activity_id(); ?>" data-bp-timestamp="<?php bp_nouveau_activity_timestamp(); ?>" data-bp-activity="<?php bp_nouveau_edit_activity_data(); ?>">
 
 	<div class="bp-activity-head">
 		<div class="activity-avatar item-avatar">
@@ -20,18 +20,26 @@ bp_nouveau_activity_hook( 'before', 'entry' ); ?>
 
 		<div class="activity-header">
 			<?php bp_activity_action(); ?>
-			<p class="activity-date"><a href="<?php echo esc_url( bp_activity_get_permalink( bp_get_activity_id() ) ); ?>"><?php echo bp_core_time_since( bp_get_activity_date_recorded() ); ?></a></p>
+			<p class="activity-date">
+                <a href="<?php echo esc_url( bp_activity_get_permalink( bp_get_activity_id() ) ); ?>"><?php echo bp_core_time_since( bp_get_activity_date_recorded() ); ?></a>
+				<?php
+				if ( function_exists( 'bp_nouveau_activity_is_edited' ) ){
+					bp_nouveau_activity_is_edited();
+				}
+				?>
+            </p>
 			<?php
             if ( function_exists( 'bp_nouveau_activity_privacy' ) ) {
 	            bp_nouveau_activity_privacy();
             }
             ?>
+
 		</div>
 	</div>
 
 	<?php bp_nouveau_activity_hook( 'before', 'activity_content' ); ?>
 
-	<div class="activity-content">
+	<div class="activity-content <?php bp_activity_entry_css_class(); ?>">
 		<?php if ( bp_nouveau_activity_has_content() ) : ?>
 			<div class="activity-inner"><?php bp_nouveau_activity_content(); ?></div>
 		<?php endif; ?>

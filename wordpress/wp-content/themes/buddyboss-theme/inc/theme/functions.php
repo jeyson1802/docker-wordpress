@@ -67,13 +67,16 @@ if ( !function_exists( 'buddyboss_theme_setup' ) ) {
 		 */
 		add_theme_support( 'custom-logo' );
 
-		// Adds wp_nav_menu() in two locations with BuddyPress deactivated.
-		register_nav_menus( array(
+
+		$args = array(
 			'buddypanel-loggedin'	 => __( 'BuddyPanel - Logged in users', 'buddyboss-theme' ),
 			'buddypanel-loggedout'	 => __( 'BuddyPanel - Logged out users', 'buddyboss-theme' ),
 			'header-menu'			 => __( 'Titlebar', 'buddyboss-theme' ),
 			'header-my-account'		 => __( 'Profile Dropdown', 'buddyboss-theme' ),
-		) );
+		);
+
+		// Adds wp_nav_menu() in two locations with BuddyPress deactivated.
+		register_nav_menus( $args );
 
 		/*
 		 * Enable support for Post Formats.
@@ -725,7 +728,16 @@ class BuddyBoss_BuddyPanel_Menu_Walker extends Walker_Nav_Menu {
 		$icon = false;
 		if ( class_exists( 'Menu_Icons' ) || class_exists( 'Buddyboss_Menu_Icons' ) ) {
 			$meta = Menu_Icons_Meta::get( $item->ID );
-			$icon = Menu_Icons_Front_End::get_icon( $meta );
+			if ( ! class_exists( 'Menu_Icons_Front_End' ) ) {
+				$path = ABSPATH . 'wp-content/themes/buddyboss-theme/inc/plugins/buddyboss-menu-icons/includes/front.php';
+				if ( file_exists( $path ) ) {
+					require_once $path;
+					Menu_Icons_Front_End::init();
+					$icon = Menu_Icons_Front_End::get_icon( $meta );
+				}
+			} else {
+				$icon = Menu_Icons_Front_End::get_icon( $meta );
+			}
 		}
 
 		if ( ! $icon ) {
@@ -782,6 +794,175 @@ class BuddyBoss_SubMenuWrap extends Walker_Nav_Menu {
         $indent = str_repeat("\t", $depth);
         $output .= "$indent</ul></div>\n";
     }
+
+	/**
+	 * Starts the element output.
+	 *
+	 * @since 3.0.0
+	 * @since 4.4.0 The {@see 'nav_menu_item_args'} filter was added.
+	 *
+	 * @see Walker::start_el()
+	 *
+	 * @param string   $output Used to append additional content (passed by reference).
+	 * @param WP_Post  $item   Menu item data object.
+	 * @param int      $depth  Depth of menu item. Used for padding.
+	 * @param stdClass $args   An object of wp_nav_menu() arguments.
+	 * @param int      $id     Current item ID.
+	 */
+	function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
+		if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
+			$t = '';
+			$n = '';
+		} else {
+			$t = "\t";
+			$n = "\n";
+		}
+		$indent = ( $depth ) ? str_repeat( $t, $depth ) : '';
+
+
+
+		$classes   = empty( $item->classes ) ? array() : (array) $item->classes;
+		$classes[] = 'menu-item-' . $item->ID;
+
+		$icon = false;
+		if ( class_exists( 'Menu_Icons' ) || class_exists( 'Buddyboss_Menu_Icons' ) ) {
+			$meta = Menu_Icons_Meta::get( $item->ID );
+			if ( ! class_exists( 'Menu_Icons_Front_End' ) ) {
+			    $path = ABSPATH . 'wp-content/themes/buddyboss-theme/inc/plugins/buddyboss-menu-icons/includes/front.php';
+			    if ( file_exists( $path ) ) {
+				    require_once $path;
+				    Menu_Icons_Front_End::init();
+				    $icon = Menu_Icons_Front_End::get_icon( $meta );
+			    }
+			} else {
+				$icon = Menu_Icons_Front_End::get_icon( $meta );
+            }
+		}
+
+		if ( ! $icon ) {
+			$classes[] = 'no-icon';
+		} else {
+			$classes[] = 'icon-added';
+		}
+
+		/**
+		 * Filters the arguments for a single nav menu item.
+		 *
+		 * @since 4.4.0
+		 *
+		 * @param stdClass $args  An object of wp_nav_menu() arguments.
+		 * @param WP_Post  $item  Menu item data object.
+		 * @param int      $depth Depth of menu item. Used for padding.
+		 */
+		$args = apply_filters( 'nav_menu_item_args', $args, $item, $depth );
+
+		/**
+		 * Filters the CSS classes applied to a menu item's list item element.
+		 *
+		 * @since 3.0.0
+		 * @since 4.1.0 The `$depth` parameter was added.
+		 *
+		 * @param string[] $classes Array of the CSS classes that are applied to the menu item's `<li>` element.
+		 * @param WP_Post  $item    The current menu item.
+		 * @param stdClass $args    An object of wp_nav_menu() arguments.
+		 * @param int      $depth   Depth of menu item. Used for padding.
+		 */
+		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth ) );
+		$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
+
+		/**
+		 * Filters the ID applied to a menu item's list item element.
+		 *
+		 * @since 3.0.1
+		 * @since 4.1.0 The `$depth` parameter was added.
+		 *
+		 * @param string   $menu_id The ID that is applied to the menu item's `<li>` element.
+		 * @param WP_Post  $item    The current menu item.
+		 * @param stdClass $args    An object of wp_nav_menu() arguments.
+		 * @param int      $depth   Depth of menu item. Used for padding.
+		 */
+		$id = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args, $depth );
+		$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
+
+		$output .= $indent . '<li' . $id . $class_names . '>';
+
+		$atts           = array();
+		$atts['title']  = ! empty( $item->attr_title ) ? $item->attr_title : '';
+		$atts['target'] = ! empty( $item->target ) ? $item->target : '';
+		if ( '_blank' === $item->target && empty( $item->xfn ) ) {
+			$atts['rel'] = 'noopener noreferrer';
+		} else {
+			$atts['rel'] = $item->xfn;
+		}
+		$atts['href']         = ! empty( $item->url ) ? $item->url : '';
+		$atts['aria-current'] = $item->current ? 'page' : '';
+
+		/**
+		 * Filters the HTML attributes applied to a menu item's anchor element.
+		 *
+		 * @since 3.6.0
+		 * @since 4.1.0 The `$depth` parameter was added.
+		 *
+		 * @param array $atts {
+		 *     The HTML attributes applied to the menu item's `<a>` element, empty strings are ignored.
+		 *
+		 *     @type string $title        Title attribute.
+		 *     @type string $target       Target attribute.
+		 *     @type string $rel          The rel attribute.
+		 *     @type string $href         The href attribute.
+		 *     @type string $aria_current The aria-current attribute.
+		 * }
+		 * @param WP_Post  $item  The current menu item.
+		 * @param stdClass $args  An object of wp_nav_menu() arguments.
+		 * @param int      $depth Depth of menu item. Used for padding.
+		 */
+		$atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args, $depth );
+
+		$attributes = '';
+		foreach ( $atts as $attr => $value ) {
+			if ( is_scalar( $value ) && '' !== $value && false !== $value ) {
+				$value       = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
+				$attributes .= ' ' . $attr . '="' . $value . '"';
+			}
+		}
+
+		/** This filter is documented in wp-includes/post-template.php */
+		$title = apply_filters( 'the_title', $item->title, $item->ID );
+
+		/**
+		 * Filters a menu item's title.
+		 *
+		 * @since 4.4.0
+		 *
+		 * @param string   $title The menu item's title.
+		 * @param WP_Post  $item  The current menu item.
+		 * @param stdClass $args  An object of wp_nav_menu() arguments.
+		 * @param int      $depth Depth of menu item. Used for padding.
+		 */
+		$title = apply_filters( 'nav_menu_item_title', $title, $item, $args, $depth );
+
+		$item_output  = $args->before;
+		$item_output .= '<a' . $attributes . '>';
+		$item_output .= $args->link_before . $title . $args->link_after;
+		$item_output .= '</a>';
+		$item_output .= $args->after;
+
+		/**
+		 * Filters a menu item's starting output.
+		 *
+		 * The menu item's starting output only includes `$args->before`, the opening `<a>`,
+		 * the menu item's title, the closing `</a>`, and `$args->after`. Currently, there is
+		 * no filter for modifying the opening and closing `<li>` for a menu item.
+		 *
+		 * @since 3.0.0
+		 *
+		 * @param string   $item_output The menu item's starting HTML output.
+		 * @param WP_Post  $item        Menu item data object.
+		 * @param int      $depth       Depth of menu item. Used for padding.
+		 * @param stdClass $args        An object of wp_nav_menu() arguments.
+		 */
+		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+	}
 }
 
 /**
@@ -1203,4 +1384,274 @@ if ( ! function_exists( 'buddyboss_theme_remove_filters_for_anonymous_class' ) )
 			}
 		}
 	}
+}
+
+/**
+ * build out the menus
+ */
+function buddyboss_theme_add_logout_admin_menus() {
+	global $wp_admin_bar;
+
+	if ( !is_object( $wp_admin_bar ) )
+		return;
+
+	if ( ! class_exists( 'BuddyPress' ) ) {
+		return;
+	}
+
+	$wp_admin_bar->add_menu(
+		array(
+			'parent' => 'my-account-buddypress',
+			'id'     => 'logouts',
+			'title'  => __( 'Log Out', 'buddyboss-theme' ),
+			'href'   => wp_logout_url(),
+		)
+	);
+}
+//add_action( 'admin_bar_menu', 'buddyboss_theme_add_logout_admin_menus', PHP_INT_MAX );
+
+function buddyboss_theme_add_admin_menus() {
+
+	global $wp_admin_bar;
+
+	if ( !is_object( $wp_admin_bar ) )
+		return;
+
+	if ( ! class_exists( 'BuddyPress' ) ) {
+		return;
+	}
+
+	$menu = wp_nav_menu(
+		array (
+			'theme_location' => 'header-my-account',
+			'echo' => FALSE,
+			'fallback_cb' => '__return_false'
+		)
+	);
+
+	if ( empty ( $menu ) ) {
+		return;
+	}
+
+	$active_components = bp_get_option( 'bp-active-components' );
+
+	foreach ( $active_components as $k => $v ) {
+		add_filter( 'bp_' . $k . '_admin_nav', '__return_empty_string' );
+	}
+
+	$menu_name3 = 'header-my-account';
+
+	if( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name3 ] ) ) {
+
+		$menu3 = wp_get_nav_menu_object( $locations[ $menu_name3 ] );
+
+		if (false != $menu3) {
+
+			$menu_items = wp_get_nav_menu_items( $menu3->term_id );
+
+			foreach( (array) $menu_items as $key => $menu_item ) {
+
+				if( $menu_item->classes ) {
+
+					$classes = implode( ' ', $menu_item->classes );
+
+				} else {
+
+					$classes = "";
+
+				}
+
+				$meta = array(
+					'class' 	=> $classes,
+					'onclick' 	=> '',
+					'target' 	=> $menu_item->target,
+					'title' 	=> $menu_item->attr_title
+				);
+
+				if( $menu_item->menu_item_parent ) {
+
+					$wp_admin_bar->add_menu(
+						array(
+							'id' 		=> $menu_item->ID,
+							'parent' 	=> $menu_item->menu_item_parent,
+							'title' 	=> $menu_item->title,
+							'href' 		=> $menu_item->url,
+							'meta' 		=> $meta
+						)
+					);
+
+				} else {
+
+					$wp_admin_bar->add_menu(
+						array(
+							'id' 		=> $menu_item->ID,
+							'parent'	=> 'my-account',
+							'title' 	=> $menu_item->title,
+							'href' 		=> $menu_item->url,
+							'meta' 		=> $meta
+						)
+					);
+				}
+			} // end foreach
+		} // end if
+	}
+
+}
+add_action( 'admin_bar_menu', 'buddyboss_theme_add_admin_menus' );
+
+function buddyboss_theme_platform_remove_toolbar_menu() {
+
+	global $wp_admin_bar;
+
+	if ( ! class_exists( 'BuddyPress' ) ) {
+		return;
+	}
+
+	$menu = wp_nav_menu(
+		array (
+			'theme_location' => 'header-my-account',
+			'echo' => FALSE,
+			'fallback_cb' => '__return_false'
+		)
+	);
+
+	//$wp_admin_bar->remove_menu('logout');
+
+	if ( empty ( $menu ) ) {
+		return;
+	}
+
+
+	$wp_admin_bar->remove_menu('my-account-courses');
+
+}
+add_action('wp_before_admin_bar_render', 'buddyboss_theme_platform_remove_toolbar_menu', 999 );
+
+add_filter( 'wp_get_nav_menu_items', 'buddyboss_theme_platform_user_profile_dropdown_menu', 999, 3 );
+function buddyboss_theme_platform_user_profile_dropdown_menu(  $items, $menu, $args ) {
+
+	if ( ! is_admin() ) {
+		return $items;
+    }
+
+	if ( ! class_exists( 'BuddyPress' ) ) {
+		return $items;
+	}
+
+    if ( is_admin() ) {
+
+        foreach ( $items as $item ) {
+
+	        $settings_array     = array( 'bp-settings-nav', 'bp-settings-sub-nav', 'bp-general-nav', 'bp-general-sub-nav', 'bp-export-nav', 'bp-export-sub-nav', 'bp-delete-account-nav', 'bp-delete-account-sub-nav', 'bp-settings-notifications-nav','bp-settings-notifications-sub-nav', 'bp-view-nav', 'bp-view-sub-nav' );
+	        $notification_array  = array( 'bp-notifications-nav', 'bp-unread-nav', 'bp-read-nav', 'bp-unread-sub-nav', 'bp-read-sub-nav', 'bp-notifications-sub-nav' );
+	        $invite_array       = array( 'bp-invites-nav', 'bp-invites-sub-nav', 'bp-send-invites-nav', 'bp-send-invites-sub-nav', 'bp-sent-invites-nav', 'bp-sent-invites-sub-nav' );
+	        $activity_array     = array( 'bp-activity-nav', 'bp-activity-sub-nav', 'bp-activity-posts-nav', 'bp-activity-posts-sub-nav', 'bp-just-me-sub-nav', 'bp-just-me-nav', 'bp-mentions-sub-nav', 'bp-mentions-nav', 'bp-following-sub-nav', 'bp-following-nav' );
+	        $messages_array     = array( 'bp-messages-nav', 'bp-messages-sub-nav', 'bp-inbox-nav', 'bp-compose-messages-nav', 'bp-compose-messages-sub-nav', 'bp-site-notice-nav', 'bp-inbox-sub-nav', 'bp-site-notice-sub-nav' );
+	        $connection_array   = array( 'bp-friends-nav', 'bp-my-friends-nav', 'bp-requests-nav', 'bp-friends-sub-nav', 'bp-my-friends-sub-nav', 'bp-requests-sub-nav' );
+	        $groups_array       = array( 'bp-groups-nav', 'bp-my-groups-nav', 'bp-groups-create-nav', 'bp-group-invites-nav', 'bp-groups-sub-nav', 'bp-my-groups-sub-nav', 'bp-groups-create-sub-nav', 'bp-group-invites-sub-nav', 'bp-group-invites-settings-nav', 'bp-group-invites-settings-sub-nav' );
+	        $media_array        = array( 'bp-photos-nav', 'bp-my-media-nav', 'bp-albums-nav', 'bp-photos-sub-nav', 'bp-my-media-sub-nav', 'bp-albums-sub-nav' );
+	        $forums_array       = array( 'bp-forums-nav', 'bp-discussions-nav', 'bp-replies-nav', 'bp-favorites-nav', 'bp-subscriptions-nav', 'bp-forums-sub-nav', 'bp-discussions-sub-nav', 'bp-replies-sub-nav', 'bp-favorites-sub-nav', 'bp-subscriptions-sub-nav', 'bp-topics-sub-nav', 'bp-topics-nav' );
+	        $documents_array    = array( 'bp-documents-nav', 'bp-my-document-nav', 'bp-documents-sub-nav', 'bp-my-document-sub-nav' );
+	        $delete_ac_array    = array( 'bp-delete-account-nav', 'bp-delete-account-sub-nav' );
+
+	        if ( isset( $item->classes ) && is_array( $item->classes ) ) {
+	            foreach ( $item->classes as $item_class ) {
+
+		            if ( bp_disable_cover_image_uploads() && 'bp-change-cover-image-nav' === $item_class ) {
+			            $item->_invalid = 1;
+			            continue;
+		            }
+
+		            if ( bp_disable_account_deletion() && in_array( $item_class, $delete_ac_array, true ) ) {
+			            $item->_invalid = 1;
+			            continue;
+		            }
+
+		            if ( bp_disable_avatar_uploads() && 'bp-change-avatar-nav' === $item_class ) {
+			            $item->_invalid = 1;
+			            continue;
+		            }
+
+		            if ( ! bp_is_active( 'forums' ) && in_array( $item_class, $forums_array, true ) ) {
+                        $item->_invalid = 1;
+                        continue;
+		            } elseif ( ! bp_is_active( 'media' ) && in_array( $item_class, $media_array, true ) ) {
+			            $item->_invalid = 1;
+			            continue;
+		            } elseif ( ! bp_is_active( 'notifications' ) && in_array( $item_class, $notification_array, true ) ) {
+			            $item->_invalid = 1;
+			            continue;
+		            } elseif ( ! bp_is_active( 'friends' ) && in_array( $item_class, $connection_array, true ) ) {
+			            $item->_invalid = 1;
+			            continue;
+		            } elseif ( ! bp_is_active( 'groups' ) && in_array( $item_class, $groups_array, true ) ) {
+			            $item->_invalid = 1;
+			            continue;
+		            } elseif ( ! bp_is_active( 'activity' ) && in_array( $item_class, $activity_array, true ) ) {
+			            $item->_invalid = 1;
+			            continue;
+		            } elseif ( ! bp_is_active( 'invites' ) && in_array( $item_class, $invite_array, true ) ) {
+			            $item->_invalid = 1;
+			            continue;
+		            } elseif ( ! bp_is_active( 'messages' ) && in_array( $item_class, $messages_array, true ) ) {
+			            $item->_invalid = 1;
+			            continue;
+		            } elseif ( ! bp_is_active( 'settings' ) && in_array( $item_class, $settings_array, true ) ) {
+			            $item->_invalid = 1;
+			            continue;
+		            } elseif ( ! bp_is_active( 'media' ) && in_array( $item_class, $documents_array, true ) ) {
+			            $item->_invalid = 1;
+			            continue;
+                    } elseif ( bp_is_active( 'groups' ) && true === bp_restrict_group_creation() && 'bp-groups-create-nav' === $item_class ) {
+			            $item->_invalid = 1;
+			            continue;
+		            } elseif ( bp_is_active( 'forums' ) && ! bbp_is_subscriptions_active() && 'bp-subscriptions-nav' === $item_class ) {
+			            $item->_invalid = 1;
+			            continue;
+		            } elseif ( bp_is_active( 'media' ) && ! bp_is_profile_media_support_enabled() && ( 'bp-photos-nav' === $item_class || 'bp-my-media-nav' === $item_class ) ) {
+			            $item->_invalid = 1;
+			            continue;
+		            } elseif ( bp_is_active( 'media' ) && ! bp_is_profile_albums_support_enabled() && 'bp-albums-nav' === $item_class ) {
+			            $item->_invalid = 1;
+			            continue;
+		            } elseif ( bp_is_active( 'media' ) && ! bp_is_profile_document_support_enabled() && ( 'bp-documents-nav' === $item_class || 'bp-my-document-nav' === $item_class ) ) {
+			            $item->_invalid = 1;
+			            continue;
+		            } elseif ( bp_is_active( 'forums' ) && ! bbp_is_favorites_active() && 'bp-favorites-nav' === $item_class ) {
+			            $item->_invalid = 1;
+			            continue;
+		            }
+		            if ( bp_disable_account_deletion() && 'bp-delete-account-nav' === $item_class ) {
+			            $item->_invalid = 1;
+			            continue;
+		            }
+                }
+            }
+        }
+    }
+
+    return apply_filters( 'buddyboss_theme_platform_user_profile_dropdown_menu', $items, $menu, $args );
+
+}
+
+add_filter( 'wp_nav_menu_objects', 'buddyboss_theme_profile_dropdown_delete_account_remove', 10, 2 );
+function buddyboss_theme_profile_dropdown_delete_account_remove( $sorted_menu_objects, $args ) {
+
+	if ( $args->theme_location != 'header-my-account' ) {
+		return $sorted_menu_objects;
+	}
+
+	$delete_ac_array = array( 'bp-delete-account-nav', 'bp-delete-account-sub-nav' );
+	foreach ( $sorted_menu_objects as $key => $menu_object ) {
+
+		foreach ( $menu_object->classes as $class ) {
+			if ( current_user_can( 'manage_options' ) && in_array( $class, $delete_ac_array, true ) ) {
+				unset( $sorted_menu_objects[ $key ] );
+				break;
+			}
+		}
+
+	}
+
+	return $sorted_menu_objects;
 }
